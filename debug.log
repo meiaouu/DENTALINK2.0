@@ -1,0 +1,329 @@
+2026-07-20 13:50:51 - === Login Attempt ===
+2026-07-20 13:50:51 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:50:51 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:50:52 - PDO connection established
+2026-07-20 13:50:52 - Email: sssantiagojhonny607@gmail.com
+2026-07-20 13:50:52 - Login result: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 13:50:52 - Response: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 13:51:12 - === Login Attempt ===
+2026-07-20 13:51:12 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:51:12 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:51:12 - PDO connection established
+2026-07-20 13:51:12 - Email: sssantiagojhonny607@gmail.com
+2026-07-20 13:51:12 - Login result: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 13:51:12 - Response: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 13:51:50 - === Login Attempt ===
+2026-07-20 13:51:50 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:51:50 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:51:50 - PDO connection established
+2026-07-20 13:51:50 - Email: sssantiagojhonny607@gmail.com
+2026-07-20 13:51:53 - === Login Attempt ===
+2026-07-20 13:51:53 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:51:53 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:51:53 - PDO connection established
+2026-07-20 13:51:53 - Email: sssantiagojhonny607@gmail.com
+2026-07-20 13:51:54 - === Login Attempt ===
+2026-07-20 13:51:54 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:51:54 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:51:54 - PDO connection established
+2026-07-20 13:51:54 - Email: sssantiagojhonny607@gmail.com
+2026-07-20 13:53:53 - === Login Attempt ===
+2026-07-20 13:53:53 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:53:53 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:53:53 - MySQLi connection established
+2026-07-20 13:53:53 - Email: sammdasadrasdid556@gmail.com
+2026-07-20 13:53:53 - Login result: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 13:53:53 - Response: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 13:53:54 - === Login Attempt ===
+2026-07-20 13:53:54 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:53:54 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:53:54 - MySQLi connection established
+2026-07-20 13:53:54 - Email: sammdasadrasdid556@gmail.com
+2026-07-20 13:53:54 - Login result: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 13:53:54 - Response: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 13:53:55 - === Login Attempt ===
+2026-07-20 13:53:55 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:53:55 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:53:55 - MySQLi connection established
+2026-07-20 13:53:55 - Email: sammdasadrasdid556@gmail.com
+2026-07-20 13:53:55 - Login result: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 13:53:55 - Response: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 13:53:55 - === Login Attempt ===
+2026-07-20 13:53:55 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:53:55 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:53:56 - MySQLi connection established
+2026-07-20 13:53:56 - Email: sammdasadrasdid556@gmail.com
+2026-07-20 13:53:56 - Login result: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 13:53:56 - Response: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 13:55:12 - === Login Attempt ===
+2026-07-20 13:55:12 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:55:12 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:55:12 - MySQLi connection established
+2026-07-20 13:55:12 - Email: sammdasadrasdid556@gmail.com
+2026-07-20 13:55:12 - Login result: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 13:55:12 - Response: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 13:57:11 - === Login Attempt ===
+2026-07-20 13:57:11 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:57:11 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:57:11 - MySQLi connection established
+2026-07-20 13:57:11 - Email: admin@gmail.com
+2026-07-20 13:57:11 - Login result: {"success":false,"message":"Invalid email or password"}
+2026-07-20 13:57:11 - Response: {"success":false,"message":"Invalid email or password"}
+2026-07-20 13:57:18 - === Login Attempt ===
+2026-07-20 13:57:18 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:57:18 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:57:19 - MySQLi connection established
+2026-07-20 13:57:19 - Email: sammdasadrasdid556@gmail.com
+2026-07-20 13:57:19 - Login result: {"success":true,"message":"Login successful","user":{"id":11,"email":"sammdasadrasdid556@gmail.com","full_name":"Lisandro Madrids","phone":"09382629463","role":"patient","is_active":0},"redirect":"pages\/patient\/patient-dashboard.php"}
+2026-07-20 13:57:19 - Response: {"success":true,"message":"Login successful","user":{"id":11,"email":"sammdasadrasdid556@gmail.com","full_name":"Lisandro Madrids","phone":"09382629463","role":"patient","is_active":0},"redirect":"pages\/patient\/patient-dashboard.php"}
+2026-07-20 13:57:50 - === Login Attempt ===
+2026-07-20 13:57:50 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 13:57:50 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 13:57:50 - MySQLi connection established
+2026-07-20 13:57:50 - Email: sammdasadrasdid556@gmail.com
+2026-07-20 13:57:50 - Login result: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 13:57:50 - Response: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 14:00:48 - === Login Attempt ===
+2026-07-20 14:00:48 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:00:48 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:00:48 - MySQLi connection established successfully
+2026-07-20 14:00:48 - Email: sssantiagojhonny607@gmail.com
+2026-07-20 14:00:48 - Password length: 8
+2026-07-20 14:00:48 - Login result: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:00:48 - Response: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:00:57 - === Login Attempt ===
+2026-07-20 14:00:57 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:00:57 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:00:57 - MySQLi connection established successfully
+2026-07-20 14:00:57 - Email: sammdasadrasdid556@gmail.com
+2026-07-20 14:00:57 - Password length: 9
+2026-07-20 14:00:57 - Login result: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 14:00:57 - Response: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 14:00:59 - === Login Attempt ===
+2026-07-20 14:00:59 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:00:59 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:00:59 - MySQLi connection established successfully
+2026-07-20 14:00:59 - Email: sammdasadrasdid556@gmail.com
+2026-07-20 14:00:59 - Password length: 9
+2026-07-20 14:00:59 - Login result: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 14:00:59 - Response: {"success":false,"message":"Your account is pending approval. Please wait for admin confirmation."}
+2026-07-20 14:01:56 - === Login Attempt ===
+2026-07-20 14:01:56 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:01:56 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:01:57 - === Login Attempt ===
+2026-07-20 14:01:57 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:01:57 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:01:58 - === Login Attempt ===
+2026-07-20 14:01:58 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:01:58 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:01:59 - === Login Attempt ===
+2026-07-20 14:01:59 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:01:59 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:02:00 - === Login Attempt ===
+2026-07-20 14:02:00 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:02:00 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:02:26 - === Login Attempt ===
+2026-07-20 14:02:26 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:02:26 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:02:27 - === Login Attempt ===
+2026-07-20 14:02:27 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:02:27 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:02:28 - === Login Attempt ===
+2026-07-20 14:02:28 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:02:28 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:04:34 - === Login Attempt Started ===
+2026-07-20 14:04:34 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:04:34 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:04:34 - MySQLi connection established successfully
+2026-07-20 14:04:34 - Email: sammadrid556@gmail.com
+2026-07-20 14:04:34 - Password provided: Yes
+2026-07-20 14:04:34 - Login result: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:04:34 - Response: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:06:13 - === Login Attempt ===
+2026-07-20 14:06:13 - Conn path: C:\wamp64\www\dental\api/../conn/conn.php
+2026-07-20 14:06:13 - Functions path: C:\wamp64\www\dental\api/../functions/login_functions.php
+2026-07-20 14:06:13 - PDO connection established
+2026-07-20 14:06:13 - Email: sammadrid556@gmail.com
+2026-07-20 14:06:13 - Login result: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:06:13 - Response: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:07:07 - === Login Attempt Started ===
+2026-07-20 14:07:07 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:07:07 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:07:07 - MySQLi connection established successfully
+2026-07-20 14:07:07 - Email: sammadrid556@gmail.com
+2026-07-20 14:07:07 - Password provided: Yes
+2026-07-20 14:07:07 - Login result: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:07:07 - Response: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:09:45 - === Login Attempt Started ===
+2026-07-20 14:09:45 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:09:45 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:09:45 - MySQLi connection established successfully
+2026-07-20 14:09:45 - Email: sssantiagojhonny607@gmail.com
+2026-07-20 14:09:45 - Password provided: Yes
+2026-07-20 14:09:46 - Login result: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:09:46 - Response: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:09:47 - === Login Attempt Started ===
+2026-07-20 14:09:47 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:09:47 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:09:47 - MySQLi connection established successfully
+2026-07-20 14:09:47 - Email: sssantiagojhonny607@gmail.com
+2026-07-20 14:09:47 - Password provided: Yes
+2026-07-20 14:09:47 - Login result: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:09:47 - Response: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:09:48 - === Login Attempt Started ===
+2026-07-20 14:09:48 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:09:48 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:09:48 - MySQLi connection established successfully
+2026-07-20 14:09:48 - Email: sssantiagojhonny607@gmail.com
+2026-07-20 14:09:48 - Password provided: Yes
+2026-07-20 14:09:48 - Login result: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:09:48 - Response: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:09:50 - === Login Attempt Started ===
+2026-07-20 14:09:50 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:09:50 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:09:50 - MySQLi connection established successfully
+2026-07-20 14:09:50 - Email: sssantiagojhonny607@gmail.com
+2026-07-20 14:09:50 - Password provided: Yes
+2026-07-20 14:09:50 - Login result: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:09:50 - Response: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:09:51 - === Login Attempt Started ===
+2026-07-20 14:09:51 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:09:51 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:09:51 - MySQLi connection established successfully
+2026-07-20 14:09:51 - Email: sssantiagojhonny607@gmail.com
+2026-07-20 14:09:51 - Password provided: Yes
+2026-07-20 14:09:51 - Login result: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:09:51 - Response: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","phone":"09382629463","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+2026-07-20 14:10:08 - === Login Attempt Started ===
+2026-07-20 14:10:08 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:10:08 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:10:08 - MySQLi connection established successfully
+2026-07-20 14:10:08 - Email: samasdmadrisad556@gmail.com
+2026-07-20 14:10:08 - Password provided: Yes
+2026-07-20 14:10:08 - Login result: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:10:08 - Response: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:11:46 - === Login Attempt Started ===
+2026-07-20 14:11:46 - POST data: {"email":"samasdmadrisad556@gmail.com","password":"asdasdasd","rememberMe":false}
+2026-07-20 14:11:46 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:11:46 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:11:46 - File exists conn: Yes
+2026-07-20 14:11:46 - File exists functions: Yes
+2026-07-20 14:11:46 - MySQLi connection established successfully
+2026-07-20 14:11:46 - Decoded input: Array
+(
+    [email] => samasdmadrisad556@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 
+)
+
+2026-07-20 14:11:46 - Email: samasdmadrisad556@gmail.com
+2026-07-20 14:11:46 - Password length: 9
+2026-07-20 14:11:46 - User exists in DB: Yes
+2026-07-20 14:11:46 - User ID: 13
+2026-07-20 14:11:46 - Stored password hash: $2y$10$dvKZwv.N/6LqzTNvPJtM8uBkO2RcwHVJZhc6xfi97zs9gcgYQDkZ.
+2026-07-20 14:11:46 - Password verification: Success
+2026-07-20 14:11:46 - Login result: {"success":true,"message":"Login successful","user":{"id":13,"email":"samasdmadrisad556@gmail.com","full_name":"Lisandro Madrid","phone":"09382629463","role":"patient","is_active":1},"redirect":"pages\/patient\/patient-dashboard.php"}
+2026-07-20 14:11:46 - Final response: {"success":true,"message":"Login successful","user":{"id":13,"email":"samasdmadrisad556@gmail.com","full_name":"Lisandro Madrid","phone":"09382629463","role":"patient","is_active":1},"redirect":"pages\/patient\/patient-dashboard.php"}
+2026-07-20 14:12:02 - === Login Attempt Started ===
+2026-07-20 14:12:02 - POST data: {"email":"samasdmadrisad556@gmail.com","password":"asdasdasd","rememberMe":false}
+2026-07-20 14:12:02 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:12:02 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:12:02 - File exists conn: Yes
+2026-07-20 14:12:02 - File exists functions: Yes
+2026-07-20 14:12:02 - MySQLi connection established successfully
+2026-07-20 14:12:02 - Decoded input: Array
+(
+    [email] => samasdmadrisad556@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 
+)
+
+2026-07-20 14:12:02 - Email: samasdmadrisad556@gmail.com
+2026-07-20 14:12:02 - Password length: 9
+2026-07-20 14:12:02 - User exists in DB: Yes
+2026-07-20 14:12:02 - User ID: 13
+2026-07-20 14:12:02 - Stored password hash: $2y$10$dvKZwv.N/6LqzTNvPJtM8uBkO2RcwHVJZhc6xfi97zs9gcgYQDkZ.
+2026-07-20 14:12:03 - Password verification: Success
+2026-07-20 14:12:03 - Login result: {"success":true,"message":"Login successful","user":{"id":13,"email":"samasdmadrisad556@gmail.com","full_name":"Lisandro Madrid","phone":"09382629463","role":"patient","is_active":1},"redirect":"pages\/patient\/patient-dashboard.php"}
+2026-07-20 14:12:03 - Final response: {"success":true,"message":"Login successful","user":{"id":13,"email":"samasdmadrisad556@gmail.com","full_name":"Lisandro Madrid","phone":"09382629463","role":"patient","is_active":1},"redirect":"pages\/patient\/patient-dashboard.php"}
+2026-07-20 14:12:11 - === Login Attempt Started ===
+2026-07-20 14:12:11 - POST data: {"email":"samasdmadrisad556@gmail.com","password":"asdasdasd","rememberMe":false}
+2026-07-20 14:12:11 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:12:11 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:12:11 - File exists conn: Yes
+2026-07-20 14:12:11 - File exists functions: Yes
+2026-07-20 14:12:11 - MySQLi connection established successfully
+2026-07-20 14:12:11 - Decoded input: Array
+(
+    [email] => samasdmadrisad556@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 
+)
+
+2026-07-20 14:12:11 - Email: samasdmadrisad556@gmail.com
+2026-07-20 14:12:11 - Password length: 9
+2026-07-20 14:12:11 - User exists in DB: Yes
+2026-07-20 14:12:11 - User ID: 13
+2026-07-20 14:12:11 - Stored password hash: $2y$10$dvKZwv.N/6LqzTNvPJtM8uBkO2RcwHVJZhc6xfi97zs9gcgYQDkZ.
+2026-07-20 14:12:11 - Password verification: Success
+2026-07-20 14:12:11 - Login result: {"success":true,"message":"Login successful","user":{"id":13,"email":"samasdmadrisad556@gmail.com","full_name":"Lisandro Madrid","phone":"09382629463","role":"patient","is_active":1},"redirect":"pages\/patient\/patient-dashboard.php"}
+2026-07-20 14:12:11 - Final response: {"success":true,"message":"Login successful","user":{"id":13,"email":"samasdmadrisad556@gmail.com","full_name":"Lisandro Madrid","phone":"09382629463","role":"patient","is_active":1},"redirect":"pages\/patient\/patient-dashboard.php"}
+2026-07-20 14:15:38 - === Login Attempt Started ===
+2026-07-20 14:15:38 - POST data: {"email":"samasdmadrisad556@gmail.com","password":"password123"}
+2026-07-20 14:15:38 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:15:38 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:15:38 - File exists conn: Yes
+2026-07-20 14:15:38 - File exists functions: Yes
+2026-07-20 14:15:38 - MySQLi connection established successfully
+2026-07-20 14:15:38 - Decoded input: Array
+(
+    [email] => samasdmadrisad556@gmail.com
+    [password] => password123
+)
+
+2026-07-20 14:15:38 - Email: samasdmadrisad556@gmail.com
+2026-07-20 14:15:38 - Password length: 11
+2026-07-20 14:15:38 - User exists in DB: Yes
+2026-07-20 14:15:38 - User ID: 13
+2026-07-20 14:15:38 - Stored password hash: $2y$10$dvKZwv.N/6LqzTNvPJtM8uBkO2RcwHVJZhc6xfi97zs9gcgYQDkZ.
+2026-07-20 14:15:38 - Password verification: Failed
+2026-07-20 14:15:38 - Login result: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:15:38 - Final response: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:17:07 - === Login Attempt Started ===
+2026-07-20 14:17:07 - POST data: {"email":"sammadrid556@gmail.com","password":"asd","rememberMe":false}
+2026-07-20 14:17:07 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:17:07 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:17:07 - File exists conn: Yes
+2026-07-20 14:17:07 - File exists functions: Yes
+2026-07-20 14:17:07 - MySQLi connection established successfully
+2026-07-20 14:17:07 - Decoded input: Array
+(
+    [email] => sammadrid556@gmail.com
+    [password] => asd
+    [rememberMe] => 
+)
+
+2026-07-20 14:17:07 - Email: sammadrid556@gmail.com
+2026-07-20 14:17:07 - Password length: 3
+2026-07-20 14:17:07 - User exists in DB: No
+2026-07-20 14:17:07 - Login result: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:17:07 - Final response: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:19:49 - === Login Attempt Started ===
+2026-07-20 14:19:49 - POST data: {"email":"sammadrid556@gmail.com","password":"asd","rememberMe":false}
+2026-07-20 14:19:49 - Conn path: C:\wamp64\www\dental/conn/conn.php
+2026-07-20 14:19:49 - Functions path: C:\wamp64\www\dental/functions/login_functions.php
+2026-07-20 14:19:49 - File exists conn: Yes
+2026-07-20 14:19:49 - File exists functions: Yes
+2026-07-20 14:19:49 - MySQLi connection established successfully
+2026-07-20 14:19:49 - Decoded input: Array
+(
+    [email] => sammadrid556@gmail.com
+    [password] => asd
+    [rememberMe] => 
+)
+
+2026-07-20 14:19:49 - Email: sammadrid556@gmail.com
+2026-07-20 14:19:49 - Password length: 3
+2026-07-20 14:19:49 - User exists in DB: No
+2026-07-20 14:19:49 - Login result: {"success":false,"message":"Invalid email or password"}
+2026-07-20 14:19:49 - Final response: {"success":false,"message":"Invalid email or password"}

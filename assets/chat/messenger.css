@@ -1,0 +1,394 @@
+/* ============================================================
+   Shared Messenger-style chat theme
+   Include on every role's page:
+   <link rel="stylesheet" href="[...]/assets/chat/messenger.css">
+   ============================================================ */
+
+:root {
+    /* Pulls from your dashboard sidebar's own theme variables (--sb-teal /
+       --sidebar-width) whenever that sidebar component is included on the
+       page, so the chat always matches it exactly. Falls back to the same
+       teal if no sidebar is present (e.g. the standalone patient widget). */
+    --chat-accent: var(--sb-teal, #0d9e8c);
+    --chat-accent-dark: #0a7d6e;
+    --chat-bg: #ffffff;
+    --chat-sidebar-bg: #ffffff;
+    --chat-thread-bg: #f0f2f5;
+    --chat-bubble-in: #e4e6eb;
+    --chat-text-dark: #050505;
+}
+
+/* Offsets the chat layout to sit beside a fixed dashboard sidebar
+   (like sidebar-staff.php / sidebar-admin.php), matching its breakpoint. */
+.msgr-page-wrapper {
+    margin-left: var(--sidebar-width, 270px);
+    height: 100vh;
+    overflow: hidden;
+}
+@media (max-width: 1023px) {
+    .msgr-page-wrapper { margin-left: 0; }
+}
+
+* { box-sizing: border-box; }
+
+body.messenger-body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: var(--chat-thread-bg);
+}
+
+.msgr-shell {
+    display: flex;
+    height: 100vh;
+    background: var(--chat-bg);
+}
+
+/* ---------------- Sidebar ---------------- */
+.msgr-sidebar {
+    width: 340px;
+    flex-shrink: 0;
+    background: var(--chat-sidebar-bg);
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+}
+.msgr-sidebar-header {
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+}
+.msgr-sidebar-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--chat-text-dark);
+}
+.msgr-search {
+    margin: 8px 12px;
+    background: #f0f2f5;
+    border-radius: 20px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.msgr-search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 13px;
+    flex: 1;
+    color: var(--chat-text-dark);
+}
+.msgr-search i { color: #65676b; font-size: 13px; }
+
+.msgr-conv-list { flex: 1; overflow-y: auto; padding: 4px 8px; }
+
+.msgr-conv-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background .12s;
+}
+.msgr-conv-item:hover { background: #f2f2f2; }
+.msgr-conv-item.active { background: #e7f3ff; }
+.msgr-conv-item.is-closed { opacity: .5; }
+
+.msgr-conv-meta { flex: 1; min-width: 0; }
+.msgr-conv-name-row { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; }
+.msgr-conv-name { font-size: 14px; font-weight: 600; color: var(--chat-text-dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.msgr-conv-time { font-size: 11px; color: #8a8d91; flex-shrink: 0; }
+.msgr-conv-preview { font-size: 12.5px; color: #65676b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+.msgr-conv-preview.unread { color: var(--chat-text-dark); font-weight: 600; }
+
+.msgr-unread-badge {
+    background: var(--chat-accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 50px;
+    min-width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+.msgr-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: #8a8d91;
+    padding: 24px;
+}
+.msgr-empty-state i { font-size: 34px; opacity: .4; margin-bottom: 10px; }
+
+/* ---------------- Avatars ---------------- */
+.msgr-avatar {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+}
+.msgr-avatar.size-32 { width: 32px; height: 32px; font-size: 13px; }
+.msgr-avatar.size-28 { width: 28px; height: 28px; font-size: 12px; }
+.msgr-avatar-spacer { width: 28px; height: 28px; flex-shrink: 0; }
+.team-channel-row {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 6px 0;
+    max-width: 75%;
+}
+
+.msgr-online-dot {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #31a24c;
+    border: 2px solid #fff;
+}
+.msgr-online-dot.offline { background: #c4c4c4; }
+
+/* ---------------- Thread ---------------- */
+.msgr-thread { flex: 1; display: flex; flex-direction: column; min-width: 0; background: var(--chat-thread-bg); }
+
+.msgr-thread-header {
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+}
+.msgr-thread-header-info { display: flex; align-items: center; gap: 10px; }
+.msgr-thread-header-name { font-weight: 700; font-size: 15px; color: var(--chat-text-dark); }
+.msgr-thread-header-status { font-size: 12px; color: #65676b; }
+
+.msgr-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.msgr-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    margin: 1px 0;
+}
+.msgr-row.mine { justify-content: flex-end; }
+.msgr-row.theirs { justify-content: flex-start; }
+
+.msgr-bubble {
+    
+    padding: 8px 12px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+#teamSubpanelDms .msgr-messages .msgr-bubble {width: fit-content;
+    max-width: 100%; }
+ .msgr-row.theirs .msgr-bubble { background: var(--chat-bubble-in); color: var(--chat-text-dark); border-bottom-left-radius: 4px; }
+.msgr-row.mine .msgr-bubble { background: var(--chat-accent); color: #fff; border-bottom-right-radius: 4px; }
+.msgr-row.theirs.grouped .msgr-bubble { border-bottom-left-radius: 18px; }
+.msgr-row.mine.grouped .msgr-bubble { border-bottom-right-radius: 18px; }
+.msgr-row.theirs.group-end .msgr-bubble { border-bottom-left-radius: 4px; }
+.msgr-row.mine.group-end .msgr-bubble { border-bottom-right-radius: 4px; }
+
+.msgr-bubble img {
+    max-width: 240px;
+    border-radius: 12px;
+    display: block;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.msgr-timestamp {
+    font-size: 11px;
+    color: #8a8d91;
+    margin: 2px 6px 8px;
+    text-align: right;
+}
+.msgr-timestamp.left { text-align: left; }
+
+.msgr-seen {
+    font-size: 10.5px;
+    color: #8a8d91;
+    text-align: right;
+    margin: 0 6px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+/* Typing indicator */
+.msgr-typing-row { display: flex; align-items: center; gap: 6px; margin: 4px 0; }
+.msgr-typing-bubble {
+    background: var(--chat-bubble-in);
+    border-radius: 18px;
+    padding: 10px 14px;
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+}
+.msgr-typing-bubble span {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #8a8d91;
+    display: inline-block;
+    animation: msgr-bounce 1.2s infinite ease-in-out;
+}
+.msgr-typing-bubble span:nth-child(2) { animation-delay: .15s; }
+.msgr-typing-bubble span:nth-child(3) { animation-delay: .3s; }
+@keyframes msgr-bounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: .5; }
+    30% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* ---------------- Composer ---------------- */
+.msgr-composer {
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+    padding: 10px 12px;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+.msgr-icon-btn {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--chat-accent);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    flex-shrink: 0;
+    transition: background .12s;
+}
+.msgr-icon-btn:hover { background: #f0f2f5; }
+
+.msgr-input-wrap {
+    flex: 1;
+    background: #f0f2f5;
+    border-radius: 20px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+}
+.msgr-input-wrap textarea {
+    border: none;
+    background: transparent;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+    width: 100%;
+    max-height: 100px;
+    font-family: inherit;
+}
+
+.msgr-send-btn {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--chat-accent);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .12s;
+}
+.msgr-send-btn:hover { background: var(--chat-accent-dark); }
+.msgr-send-btn:disabled { background: #cbd5e1; cursor: default; }
+
+.msgr-preview-strip {
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border-top: 1px solid #f0f0f0;
+}
+.msgr-preview-strip img { max-height: 50px; border-radius: 6px; }
+
+/* status pill badges used in sidebar (staff/admin only) */
+.msgr-status-pill {
+    font-size: 10px;
+    padding: 1px 7px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.msgr-status-pill.open { background: #fef3c7; color: #92400e; }
+.msgr-status-pill.staff_assigned { background: #dbeafe; color: #1e40af; }
+.msgr-status-pill.closed { background: #f1f1f1; color: #666; }
+
+/* scrollbars */
+.msgr-conv-list::-webkit-scrollbar, .msgr-messages::-webkit-scrollbar { width: 6px; }
+.msgr-conv-list::-webkit-scrollbar-thumb, .msgr-messages::-webkit-scrollbar-thumb { background: #d3d3d3; border-radius: 10px; }
+
+@media (max-width: 768px) {
+    .msgr-sidebar { width: 100%; position: absolute; inset: 0; z-index: 10; }
+    .msgr-sidebar.hide-mobile { display: none; }
+    .msgr-thread.hide-mobile { display: none; }
+}
+
+/* ---------------- Minimize / reopen toggle ---------------- */
+/* Purely client-side (localStorage) — hides the chat box for THIS user only,
+   independent of any conversation status in the database. */
+.msgr-hidden { display: none !important; }
+
+.msgr-minimize-btn {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: #65676b;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background .12s;
+}
+.msgr-minimize-btn:hover { background: #f0f2f5; color: var(--chat-accent); }
+
+.msgr-float-bubble {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--chat-accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 10px 28px rgba(0,0,0,.28);
+    cursor: pointer;
+    border: none;
+    z-index: 200;
+    transition: transform .15s, background .15s;
+}
+.msgr-float-bubble:hover { background: var(--chat-accent-dark); transform: scale(1.06); }

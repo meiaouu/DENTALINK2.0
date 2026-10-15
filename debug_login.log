@@ -1,0 +1,4188 @@
+[2026-07-20 14:21:06] === LOGIN REQUEST RECEIVED ===
+[2026-07-20 14:21:06] Request method: POST
+[2026-07-20 14:21:06] Headers: Array
+(
+    [Host] => 127.0.0.1
+    [Connection] => keep-alive
+    [Content-Length] => 69
+    [sec-ch-ua-platform] => "Windows"
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [Accept] => application/json
+    [sec-ch-ua] => "Not;A=Brand";v="8", "Chromium";v="150", "Google Chrome";v="150"
+    [Content-Type] => application/json
+    [sec-ch-ua-mobile] => ?0
+    [Origin] => http://127.0.0.1
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://127.0.0.1/dental/index.php
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,fil;q=0.8
+    [Cookie] => PHPSESSID=o04hajh93j9nrsl5ndiho9sgvr
+)
+
+[2026-07-20 14:21:06] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-20 14:21:06] Conn file exists: YES
+[2026-07-20 14:21:06] Functions file exists: YES
+[2026-07-20 14:21:06] MySQLi connection established successfully
+[2026-07-20 14:21:06] Raw input received: {"email":"sammadrid556@gmail.com","password":"as","rememberMe":false}
+[2026-07-20 14:21:06] Decoded input: Array
+(
+    [email] => sammadrid556@gmail.com
+    [password] => as
+    [rememberMe] => 
+)
+
+[2026-07-20 14:21:06] Login attempt for email: sammadrid556@gmail.com
+[2026-07-20 14:21:06] Password length: 2
+[2026-07-20 14:21:06] Remember me: NO
+[2026-07-20 14:21:06] Step 1: Checking if user exists...
+[2026-07-20 14:21:06] User NOT found in database for email: sammadrid556@gmail.com
+[2026-07-20 14:22:36] === LOGIN REQUEST RECEIVED ===
+[2026-07-20 14:22:36] Request method: POST
+[2026-07-20 14:22:36] Headers: Array
+(
+    [Host] => 127.0.0.1
+    [Connection] => keep-alive
+    [Content-Length] => 76
+    [sec-ch-ua-platform] => "Windows"
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [Accept] => application/json
+    [sec-ch-ua] => "Not;A=Brand";v="8", "Chromium";v="150", "Google Chrome";v="150"
+    [Content-Type] => application/json
+    [sec-ch-ua-mobile] => ?0
+    [Origin] => http://127.0.0.1
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://127.0.0.1/dental/index.php
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,fil;q=0.8
+    [Cookie] => PHPSESSID=o04hajh93j9nrsl5ndiho9sgvr
+)
+
+[2026-07-20 14:22:36] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-20 14:22:36] Conn file exists: YES
+[2026-07-20 14:22:36] Functions file exists: YES
+[2026-07-20 14:22:36] MySQLi connection established successfully
+[2026-07-20 14:22:36] Raw input received: {"email":"sammadrid556@gmail.com","password":"asdasdasd","rememberMe":false}
+[2026-07-20 14:22:36] Decoded input: Array
+(
+    [email] => sammadrid556@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 
+)
+
+[2026-07-20 14:22:36] Login attempt for email: sammadrid556@gmail.com
+[2026-07-20 14:22:36] Password length: 9
+[2026-07-20 14:22:36] Remember me: NO
+[2026-07-20 14:22:36] Step 1: Checking if user exists...
+[2026-07-20 14:22:36] User NOT found in database for email: sammadrid556@gmail.com
+[2026-07-20 14:22:52] === LOGIN REQUEST RECEIVED ===
+[2026-07-20 14:22:52] Request method: POST
+[2026-07-20 14:22:52] Headers: Array
+(
+    [Host] => 127.0.0.1
+    [Connection] => keep-alive
+    [Content-Length] => 81
+    [sec-ch-ua-platform] => "Windows"
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [Accept] => application/json
+    [sec-ch-ua] => "Not;A=Brand";v="8", "Chromium";v="150", "Google Chrome";v="150"
+    [Content-Type] => application/json
+    [sec-ch-ua-mobile] => ?0
+    [Origin] => http://127.0.0.1
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://127.0.0.1/dental/index.php
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,fil;q=0.8
+    [Cookie] => PHPSESSID=o04hajh93j9nrsl5ndiho9sgvr
+)
+
+[2026-07-20 14:22:52] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-20 14:22:52] Conn file exists: YES
+[2026-07-20 14:22:52] Functions file exists: YES
+[2026-07-20 14:22:52] MySQLi connection established successfully
+[2026-07-20 14:22:52] Raw input received: {"email":"ssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-20 14:22:52] Decoded input: Array
+(
+    [email] => ssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-20 14:22:52] Login attempt for email: ssantiagojhonny607@gmail.com
+[2026-07-20 14:22:52] Password length: 8
+[2026-07-20 14:22:52] Remember me: NO
+[2026-07-20 14:22:52] Step 1: Checking if user exists...
+[2026-07-20 14:22:52] User NOT found in database for email: ssantiagojhonny607@gmail.com
+[2026-07-20 14:22:55] === LOGIN REQUEST RECEIVED ===
+[2026-07-20 14:22:55] Request method: POST
+[2026-07-20 14:22:55] Headers: Array
+(
+    [Host] => 127.0.0.1
+    [Connection] => keep-alive
+    [Content-Length] => 82
+    [sec-ch-ua-platform] => "Windows"
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [Accept] => application/json
+    [sec-ch-ua] => "Not;A=Brand";v="8", "Chromium";v="150", "Google Chrome";v="150"
+    [Content-Type] => application/json
+    [sec-ch-ua-mobile] => ?0
+    [Origin] => http://127.0.0.1
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://127.0.0.1/dental/index.php
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,fil;q=0.8
+    [Cookie] => PHPSESSID=o04hajh93j9nrsl5ndiho9sgvr
+)
+
+[2026-07-20 14:22:55] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-20 14:22:55] Conn file exists: YES
+[2026-07-20 14:22:55] Functions file exists: YES
+[2026-07-20 14:22:55] MySQLi connection established successfully
+[2026-07-20 14:22:55] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-20 14:22:55] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-20 14:22:55] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-20 14:22:55] Password length: 8
+[2026-07-20 14:22:55] Remember me: NO
+[2026-07-20 14:22:55] Step 1: Checking if user exists...
+[2026-07-20 14:22:55] User found in database: | Data: Array
+(
+    [id] => 1
+    [email] => sssantiagojhonny607@gmail.com
+    [full_name] => jhonny santiago
+    [role] => admin
+    [is_active] => 1
+    [stored_hash] => $2y$10$aGMT3Tb7zFtvHOfh5w4JG.9V7RhOp1hixs1LE4iQNN0erm2zZ3IES
+    [hash_length] => 60
+)
+
+[2026-07-20 14:22:55] Step 2: Verifying password...
+[2026-07-20 14:22:55] Password verification result: SUCCESS
+[2026-07-20 14:22:55] Step 3: Checking account status...
+[2026-07-20 14:22:55] Step 4: Updating last login...
+[2026-07-20 14:22:55] Last login update: SUCCESS
+[2026-07-20 14:22:55] Step 5: Preparing response...
+[2026-07-20 14:22:55] Redirect URL for role admin: pages/admin/dashboard.php
+[2026-07-20 14:22:55] Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-20 14:22:55] Response: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+[2026-07-20 14:23:55] === LOGIN REQUEST RECEIVED ===
+[2026-07-20 14:23:55] Request method: POST
+[2026-07-20 14:23:55] Headers: Array
+(
+    [Host] => 127.0.0.1
+    [Connection] => keep-alive
+    [Content-Length] => 80
+    [sec-ch-ua-platform] => "Windows"
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [Accept] => application/json
+    [sec-ch-ua] => "Not;A=Brand";v="8", "Chromium";v="150", "Google Chrome";v="150"
+    [Content-Type] => application/json
+    [sec-ch-ua-mobile] => ?0
+    [Origin] => http://127.0.0.1
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://127.0.0.1/dental/index.php
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,fil;q=0.8
+    [Cookie] => PHPSESSID=c1puvsbn3122occl6fs85e380f
+)
+
+[2026-07-20 14:23:55] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-20 14:23:55] Conn file exists: YES
+[2026-07-20 14:23:55] Functions file exists: YES
+[2026-07-20 14:23:55] MySQLi connection established successfully
+[2026-07-20 14:23:55] Raw input received: {"email":"sammadrid5256asd@gmail.com","password":"asdasdasd","rememberMe":false}
+[2026-07-20 14:23:55] Decoded input: Array
+(
+    [email] => sammadrid5256asd@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 
+)
+
+[2026-07-20 14:23:55] Login attempt for email: sammadrid5256asd@gmail.com
+[2026-07-20 14:23:55] Password length: 9
+[2026-07-20 14:23:55] Remember me: NO
+[2026-07-20 14:23:55] Step 1: Checking if user exists...
+[2026-07-20 14:23:55] User found in database: | Data: Array
+(
+    [id] => 14
+    [email] => sammadrid5256asd@gmail.com
+    [full_name] => jhonny santiagos
+    [role] => patient
+    [is_active] => 1
+    [stored_hash] => $2y$10$pxuwGtxt/C/mDxnD9uTuDup0nbOLG7PR18ySvj6uFtRyvNTEXdkt6
+    [hash_length] => 60
+)
+
+[2026-07-20 14:23:55] Step 2: Verifying password...
+[2026-07-20 14:23:55] Password verification result: SUCCESS
+[2026-07-20 14:23:55] Step 3: Checking account status...
+[2026-07-20 14:23:55] Step 4: Updating last login...
+[2026-07-20 14:23:55] Last login update: SUCCESS
+[2026-07-20 14:23:55] Step 5: Preparing response...
+[2026-07-20 14:23:55] Redirect URL for role patient: pages/patient/patient-dashboard.php
+[2026-07-20 14:23:55] Login successful for user: sammadrid5256asd@gmail.com
+[2026-07-20 14:23:55] Response: {"success":true,"message":"Login successful","user":{"id":14,"email":"sammadrid5256asd@gmail.com","full_name":"jhonny santiagos","role":"patient","is_active":1},"redirect":"pages\/patient\/patient-dashboard.php"}
+[2026-07-20 14:24:40] === LOGIN REQUEST RECEIVED ===
+[2026-07-20 14:24:40] Request method: POST
+[2026-07-20 14:24:40] Headers: Array
+(
+    [Host] => 127.0.0.1
+    [Connection] => keep-alive
+    [Content-Length] => 77
+    [sec-ch-ua-platform] => "Windows"
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [Accept] => application/json
+    [sec-ch-ua] => "Not;A=Brand";v="8", "Chromium";v="150", "Google Chrome";v="150"
+    [Content-Type] => application/json
+    [sec-ch-ua-mobile] => ?0
+    [Origin] => http://127.0.0.1
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://127.0.0.1/dental/index.php
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,fil;q=0.8
+    [Cookie] => PHPSESSID=c1puvsbn3122occl6fs85e380f
+)
+
+[2026-07-20 14:24:40] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-20 14:24:40] Conn file exists: YES
+[2026-07-20 14:24:40] Functions file exists: YES
+[2026-07-20 14:24:40] MySQLi connection established successfully
+[2026-07-20 14:24:40] Raw input received: {"email":"sammadrid5256asd@gmail.com","password":"asdasd","rememberMe":false}
+[2026-07-20 14:24:40] Decoded input: Array
+(
+    [email] => sammadrid5256asd@gmail.com
+    [password] => asdasd
+    [rememberMe] => 
+)
+
+[2026-07-20 14:24:40] Login attempt for email: sammadrid5256asd@gmail.com
+[2026-07-20 14:24:40] Password length: 6
+[2026-07-20 14:24:40] Remember me: NO
+[2026-07-20 14:24:40] Step 1: Checking if user exists...
+[2026-07-20 14:24:40] User found in database: | Data: Array
+(
+    [id] => 14
+    [email] => sammadrid5256asd@gmail.com
+    [full_name] => jhonny santiagos
+    [role] => patient
+    [is_active] => 1
+    [stored_hash] => $2y$10$pxuwGtxt/C/mDxnD9uTuDup0nbOLG7PR18ySvj6uFtRyvNTEXdkt6
+    [hash_length] => 60
+)
+
+[2026-07-20 14:24:40] Step 2: Verifying password...
+[2026-07-20 14:24:40] Password verification result: FAILED
+[2026-07-20 14:24:40] Password mismatch for user: sammadrid5256asd@gmail.com
+[2026-07-20 14:24:42] === LOGIN REQUEST RECEIVED ===
+[2026-07-20 14:24:42] Request method: POST
+[2026-07-20 14:24:42] Headers: Array
+(
+    [Host] => 127.0.0.1
+    [Connection] => keep-alive
+    [Content-Length] => 80
+    [sec-ch-ua-platform] => "Windows"
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [Accept] => application/json
+    [sec-ch-ua] => "Not;A=Brand";v="8", "Chromium";v="150", "Google Chrome";v="150"
+    [Content-Type] => application/json
+    [sec-ch-ua-mobile] => ?0
+    [Origin] => http://127.0.0.1
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://127.0.0.1/dental/index.php
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,fil;q=0.8
+    [Cookie] => PHPSESSID=c1puvsbn3122occl6fs85e380f
+)
+
+[2026-07-20 14:24:42] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-20 14:24:42] Conn file exists: YES
+[2026-07-20 14:24:42] Functions file exists: YES
+[2026-07-20 14:24:42] MySQLi connection established successfully
+[2026-07-20 14:24:42] Raw input received: {"email":"sammadrid5256asd@gmail.com","password":"asdasdasd","rememberMe":false}
+[2026-07-20 14:24:42] Decoded input: Array
+(
+    [email] => sammadrid5256asd@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 
+)
+
+[2026-07-20 14:24:42] Login attempt for email: sammadrid5256asd@gmail.com
+[2026-07-20 14:24:42] Password length: 9
+[2026-07-20 14:24:42] Remember me: NO
+[2026-07-20 14:24:42] Step 1: Checking if user exists...
+[2026-07-20 14:24:42] User found in database: | Data: Array
+(
+    [id] => 14
+    [email] => sammadrid5256asd@gmail.com
+    [full_name] => jhonny santiagos
+    [role] => patient
+    [is_active] => 1
+    [stored_hash] => $2y$10$pxuwGtxt/C/mDxnD9uTuDup0nbOLG7PR18ySvj6uFtRyvNTEXdkt6
+    [hash_length] => 60
+)
+
+[2026-07-20 14:24:42] Step 2: Verifying password...
+[2026-07-20 14:24:42] Password verification result: SUCCESS
+[2026-07-20 14:24:42] Step 3: Checking account status...
+[2026-07-20 14:24:42] Step 4: Updating last login...
+[2026-07-20 14:24:42] Last login update: SUCCESS
+[2026-07-20 14:24:42] Step 5: Preparing response...
+[2026-07-20 14:24:42] Redirect URL for role patient: pages/patient/patient-dashboard.php
+[2026-07-20 14:24:42] Login successful for user: sammadrid5256asd@gmail.com
+[2026-07-20 14:24:42] Response: {"success":true,"message":"Login successful","user":{"id":14,"email":"sammadrid5256asd@gmail.com","full_name":"jhonny santiagos","role":"patient","is_active":1},"redirect":"pages\/patient\/patient-dashboard.php"}
+[2026-07-22 14:09:57] === LOGIN REQUEST RECEIVED ===
+[2026-07-22 14:09:57] Request method: POST
+[2026-07-22 14:09:57] Headers: Array
+(
+    [Host] => 127.0.0.1
+    [Connection] => keep-alive
+    [Content-Length] => 82
+    [sec-ch-ua-platform] => "Windows"
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [sec-ch-ua] => "Not;A=Brand";v="8", "Chromium";v="150", "Google Chrome";v="150"
+    [Content-Type] => application/json
+    [sec-ch-ua-mobile] => ?0
+    [Accept] => */*
+    [Origin] => http://127.0.0.1
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://127.0.0.1/dental/index.php
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,fil;q=0.8
+    [Cookie] => PHPSESSID=c1puvsbn3122occl6fs85e380f
+)
+
+[2026-07-22 14:09:57] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-22 14:09:57] Conn file exists: YES
+[2026-07-22 14:09:57] Functions file exists: YES
+[2026-07-22 14:09:57] MySQLi connection established successfully
+[2026-07-22 14:09:57] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-22 14:09:57] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-22 14:09:57] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-22 14:09:57] Password length: 8
+[2026-07-22 14:09:57] Remember me: NO
+[2026-07-22 14:09:57] Step 1: Checking if user exists...
+[2026-07-22 14:09:57] User found in database: | Data: Array
+(
+    [id] => 1
+    [email] => sssantiagojhonny607@gmail.com
+    [full_name] => jhonny santiago
+    [role] => admin
+    [is_active] => 1
+    [stored_hash] => $2y$10$aGMT3Tb7zFtvHOfh5w4JG.9V7RhOp1hixs1LE4iQNN0erm2zZ3IES
+    [hash_length] => 60
+)
+
+[2026-07-22 14:09:57] Step 2: Verifying password...
+[2026-07-22 14:09:57] Password verification result: SUCCESS
+[2026-07-22 14:09:57] Step 3: Checking account status...
+[2026-07-22 14:09:57] Step 4: Updating last login...
+[2026-07-22 14:09:57] Last login update: SUCCESS
+[2026-07-22 14:09:57] Step 5: Preparing response...
+[2026-07-22 14:09:57] Redirect URL for role admin: pages/admin/dashboard.php
+[2026-07-22 14:09:57] Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-22 14:09:57] Response: {"success":true,"message":"Login successful","user":{"id":1,"email":"sssantiagojhonny607@gmail.com","full_name":"jhonny santiago","role":"admin","is_active":1},"redirect":"pages\/admin\/dashboard.php"}
+[2026-07-22 14:43:39] === LOGIN REQUEST RECEIVED ===
+[2026-07-22 14:43:39] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-22 14:43:39] MySQLi connection established successfully
+[2026-07-22 14:43:39] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-22 14:43:39] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-22 14:43:39] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-22 14:43:39] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-07-22 14:43:39] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-07-22 14:43:39] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-22 15:10:29] === LOGIN REQUEST RECEIVED ===
+[2026-07-22 15:10:29] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-22 15:10:29] MySQLi connection established successfully
+[2026-07-22 15:10:29] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-22 15:10:29] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-22 15:10:29] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-22 15:10:29] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-07-22 15:10:29] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-07-22 15:10:29] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-23 02:14:45] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 02:14:45] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 02:14:45] MySQLi connection established successfully
+[2026-07-23 02:14:45] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 02:14:45] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 02:14:45] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-23 02:14:45] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-07-23 02:14:45] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-07-23 02:14:45] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-23 03:22:56] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 03:22:56] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 03:22:56] MySQLi connection established successfully
+[2026-07-23 03:22:56] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 03:22:56] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 03:22:56] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-23 03:22:56] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-07-23 03:22:56] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-07-23 03:22:56] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-23 06:00:44] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 06:00:44] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 06:00:44] MySQLi connection established successfully
+[2026-07-23 06:00:44] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 06:00:44] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 06:00:44] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-23 06:00:44] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-07-23 06:00:44] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-07-23 06:00:44] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-23 10:36:25] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 10:36:25] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 10:36:25] MySQLi connection established successfully
+[2026-07-23 10:36:25] Raw input received: {"email":"sammdasadrasdid556@gmail.com","password":"asdasdasd","rememberMe":false}
+[2026-07-23 10:36:25] Decoded input: Array
+(
+    [email] => sammdasadrasdid556@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 
+)
+
+[2026-07-23 10:36:25] Login attempt for email: sammdasadrasdid556@gmail.com
+[2026-07-23 10:36:25] ❌ Login failed: Invalid email or password
+[2026-07-23 10:37:05] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 10:37:05] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 10:37:05] MySQLi connection established successfully
+[2026-07-23 10:37:05] Raw input received: {"email":"sammdasadrasdid556@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 10:37:05] Decoded input: Array
+(
+    [email] => sammdasadrasdid556@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 10:37:05] Login attempt for email: sammdasadrasdid556@gmail.com
+[2026-07-23 10:37:05] ❌ Login failed: Invalid email or password
+[2026-07-23 10:37:22] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 10:37:22] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 10:37:22] MySQLi connection established successfully
+[2026-07-23 10:37:22] Raw input received: {"email":"sammadrid556@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 10:37:22] Decoded input: Array
+(
+    [email] => sammadrid556@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 10:37:22] Login attempt for email: sammadrid556@gmail.com
+[2026-07-23 10:37:22] ✅ Staff session set for: sammadrid556@gmail.com (Role: staff)
+[2026-07-23 10:37:22] Session data: Array
+(
+    [user_id] => 24
+    [user_email] => sammadrid556@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 24
+    [staff_name] => jhonny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-07-23 10:37:22] ✅ Login successful for user: sammadrid556@gmail.com
+[2026-07-23 10:38:13] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 10:38:13] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 10:38:13] MySQLi connection established successfully
+[2026-07-23 10:38:13] Raw input received: {"email":"sammadrid556@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 10:38:13] Decoded input: Array
+(
+    [email] => sammadrid556@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 10:38:13] Login attempt for email: sammadrid556@gmail.com
+[2026-07-23 10:38:13] ✅ Staff session set for: sammadrid556@gmail.com (Role: staff)
+[2026-07-23 10:38:13] Session data: Array
+(
+    [user_id] => 24
+    [user_email] => sammadrid556@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 24
+    [staff_name] => jhonny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-07-23 10:38:13] ✅ Login successful for user: sammadrid556@gmail.com
+[2026-07-23 12:28:55] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 12:28:55] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 12:28:55] MySQLi connection established successfully
+[2026-07-23 12:28:55] Raw input received: {"email":"sammadrid556@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 12:28:55] Decoded input: Array
+(
+    [email] => sammadrid556@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 12:28:55] Login attempt for email: sammadrid556@gmail.com
+[2026-07-23 12:28:55] ✅ Staff session set for: sammadrid556@gmail.com (Role: staff)
+[2026-07-23 12:28:55] Session data: Array
+(
+    [user_id] => 24
+    [user_email] => sammadrid556@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 24
+    [staff_name] => jhonny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-07-23 12:28:55] ✅ Login successful for user: sammadrid556@gmail.com
+[2026-07-23 12:36:40] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 12:36:40] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 12:36:40] MySQLi connection established successfully
+[2026-07-23 12:36:40] Raw input received: {"email":"sammadrid556@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 12:36:40] Decoded input: Array
+(
+    [email] => sammadrid556@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 12:36:40] Login attempt for email: sammadrid556@gmail.com
+[2026-07-23 12:36:40] ✅ Staff session set for: sammadrid556@gmail.com (Role: staff)
+[2026-07-23 12:36:40] Session data: Array
+(
+    [user_id] => 24
+    [user_email] => sammadrid556@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 24
+    [staff_name] => jhonny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-07-23 12:36:40] ✅ Login successful for user: sammadrid556@gmail.com
+[2026-07-23 13:53:13] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 13:53:13] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 13:53:13] MySQLi connection established successfully
+[2026-07-23 13:53:13] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 13:53:13] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 13:53:13] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-07-23 13:53:13] Patient login, staff session cleared
+[2026-07-23 13:53:13] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-07-23 15:21:52] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 15:21:52] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 15:21:52] MySQLi connection established successfully
+[2026-07-23 15:21:52] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 15:21:52] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 15:21:52] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-07-23 15:21:52] Patient login, staff session cleared
+[2026-07-23 15:21:52] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-07-23 15:25:32] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 15:25:32] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 15:25:32] MySQLi connection established successfully
+[2026-07-23 15:25:32] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 15:25:32] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 15:25:32] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-23 15:25:32] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-07-23 15:25:32] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiagos
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiagos
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-07-23 15:25:32] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-23 15:38:10] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 15:38:10] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 15:38:10] MySQLi connection established successfully
+[2026-07-23 15:38:10] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 15:38:10] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 15:38:10] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-07-23 15:38:10] Patient login, staff session cleared
+[2026-07-23 15:38:10] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-07-23 15:40:17] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 15:40:17] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 15:40:17] MySQLi connection established successfully
+[2026-07-23 15:40:17] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"tq4)tG%H(","rememberMe":false}
+[2026-07-23 15:40:17] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => tq4)tG%H(
+    [rememberMe] => 
+)
+
+[2026-07-23 15:40:17] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-07-23 15:40:17] ❌ Login failed: Invalid email or password
+[2026-07-23 15:40:25] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 15:40:25] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 15:40:25] MySQLi connection established successfully
+[2026-07-23 15:40:25] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"tq4)tG%H(","rememberMe":false}
+[2026-07-23 15:40:25] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => tq4)tG%H(
+    [rememberMe] => 
+)
+
+[2026-07-23 15:40:25] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-07-23 15:40:25] ❌ Login failed: Invalid email or password
+[2026-07-23 15:40:37] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 15:40:37] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 15:40:37] MySQLi connection established successfully
+[2026-07-23 15:40:37] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"$tq4)tG%H(","rememberMe":false}
+[2026-07-23 15:40:37] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => $tq4)tG%H(
+    [rememberMe] => 
+)
+
+[2026-07-23 15:40:37] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-07-23 15:40:37] Patient login, staff session cleared
+[2026-07-23 15:40:37] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-07-23 15:41:38] === LOGIN REQUEST RECEIVED ===
+[2026-07-23 15:41:38] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-23 15:41:38] MySQLi connection established successfully
+[2026-07-23 15:41:38] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-23 15:41:38] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-23 15:41:38] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-07-23 15:41:38] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-07-23 15:41:38] Session data: Array
+(
+    [pending_booking] => Array
+        (
+            [phone] => +639388631221
+            [email] => chhhhas@gmail.com
+            [services] => Array
+                (
+                    [0] => 1
+                    [1] => 3
+                )
+
+            [termsAccepted] => 1
+            [privacyAccepted] => 1
+        )
+
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-07-23 15:41:38] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-07-24 03:38:04] === LOGIN REQUEST RECEIVED ===
+[2026-07-24 03:38:04] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-24 03:38:04] MySQLi connection established successfully
+[2026-07-24 03:38:04] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-24 03:38:04] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-24 03:38:04] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-24 03:38:04] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-07-24 03:38:04] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiagos
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiagos
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-07-24 03:38:04] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-24 04:52:12] === LOGIN REQUEST RECEIVED ===
+[2026-07-24 04:52:12] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-24 04:52:12] MySQLi connection established successfully
+[2026-07-24 04:52:12] Raw input received: {"email":"sammadrid556@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-24 04:52:12] Decoded input: Array
+(
+    [email] => sammadrid556@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-24 04:52:12] Login attempt for email: sammadrid556@gmail.com
+[2026-07-24 04:52:12] ❌ Login failed: Invalid email or password
+[2026-07-24 04:52:34] === LOGIN REQUEST RECEIVED ===
+[2026-07-24 04:52:34] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-24 04:52:34] MySQLi connection established successfully
+[2026-07-24 04:52:34] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-24 04:52:34] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-24 04:52:34] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-07-24 04:52:34] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-07-24 04:52:34] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-07-24 04:52:34] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-07-25 02:36:48] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 02:36:48] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 02:36:48] MySQLi connection established successfully
+[2026-07-25 02:36:48] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-25 02:36:48] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-25 02:36:48] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-07-25 02:36:48] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-07-25 02:36:48] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-07-25 02:36:48] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-07-25 02:37:28] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 02:37:28] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 02:37:28] MySQLi connection established successfully
+[2026-07-25 02:37:28] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-25 02:37:28] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-25 02:37:28] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-25 02:37:28] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-07-25 02:37:28] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiagos
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiagos
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-07-25 02:37:28] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-25 02:39:48] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 02:39:48] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 02:39:48] MySQLi connection established successfully
+[2026-07-25 02:39:48] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-25 02:39:48] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-25 02:39:48] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-07-25 02:39:48] ❌ Login failed: Invalid email or password
+[2026-07-25 02:39:55] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 02:39:55] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 02:39:55] MySQLi connection established successfully
+[2026-07-25 02:39:55] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-25 02:39:55] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-25 02:39:55] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-07-25 02:39:55] ❌ Login failed: Invalid email or password
+[2026-07-25 02:40:04] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 02:40:04] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 02:40:04] MySQLi connection established successfully
+[2026-07-25 02:40:04] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-25 02:40:04] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-25 02:40:04] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-07-25 02:40:04] Patient login, staff session cleared
+[2026-07-25 02:40:04] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-07-25 03:31:42] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 03:31:42] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 03:31:42] MySQLi connection established successfully
+[2026-07-25 03:31:42] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-25 03:31:42] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-25 03:31:42] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-07-25 03:31:42] ❌ Login failed: Invalid email or password
+[2026-07-25 03:31:56] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 03:31:56] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 03:31:56] MySQLi connection established successfully
+[2026-07-25 03:31:56] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-25 03:31:56] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-25 03:31:56] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-07-25 03:31:56] Patient login, staff session cleared
+[2026-07-25 03:31:56] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-07-25 04:11:18] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 04:11:18] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 04:11:18] MySQLi connection established successfully
+[2026-07-25 04:11:18] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-25 04:11:18] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-25 04:11:18] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-07-25 04:11:18] Patient login, staff session cleared
+[2026-07-25 04:11:18] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-07-25 04:12:02] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 04:12:02] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 04:12:02] MySQLi connection established successfully
+[2026-07-25 04:12:03] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-25 04:12:03] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-25 04:12:03] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-07-25 04:12:03] Patient login, staff session cleared
+[2026-07-25 04:12:03] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-07-25 05:01:27] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 05:01:27] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 05:01:27] MySQLi connection established successfully
+[2026-07-25 05:01:27] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-25 05:01:27] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-25 05:01:27] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-07-25 05:01:27] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-07-25 05:01:27] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-07-25 05:01:27] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-07-25 05:08:42] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 05:08:42] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 05:08:43] MySQLi connection established successfully
+[2026-07-25 05:08:43] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-25 05:08:43] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-25 05:08:43] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-07-25 05:08:43] Patient login, staff session cleared
+[2026-07-25 05:08:43] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-07-25 06:42:24] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 06:42:24] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 06:42:24] MySQLi connection established successfully
+[2026-07-25 06:42:24] Raw input received: {"email":"sammddaassadrid556@gmail.com","password":"aaaaaaaa","rememberMe":true}
+[2026-07-25 06:42:24] Decoded input: Array
+(
+    [email] => sammddaassadrid556@gmail.com
+    [password] => aaaaaaaa
+    [rememberMe] => 1
+)
+
+[2026-07-25 06:42:24] Login attempt for email: sammddaassadrid556@gmail.com
+[2026-07-25 06:42:24] Patient login, staff session cleared
+[2026-07-25 06:42:24] ✅ Login successful for user: sammddaassadrid556@gmail.com
+[2026-07-25 07:01:06] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 07:01:06] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 07:01:06] MySQLi connection established successfully
+[2026-07-25 07:01:06] Raw input received: {"email":"asdsammadrisasdd556@gmail.com","password":"asdasdasd","rememberMe":true}
+[2026-07-25 07:01:06] Decoded input: Array
+(
+    [email] => asdsammadrisasdd556@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 1
+)
+
+[2026-07-25 07:01:06] Login attempt for email: asdsammadrisasdd556@gmail.com
+[2026-07-25 07:01:06] Patient login, staff session cleared
+[2026-07-25 07:01:06] ✅ Login successful for user: asdsammadrisasdd556@gmail.com
+[2026-07-25 07:02:53] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 07:02:53] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 07:02:53] MySQLi connection established successfully
+[2026-07-25 07:02:53] Raw input received: {"email":"sammadrid556ssad@gmail.com","password":"asdasdasd","rememberMe":true}
+[2026-07-25 07:02:53] Decoded input: Array
+(
+    [email] => sammadrid556ssad@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 1
+)
+
+[2026-07-25 07:02:53] Login attempt for email: sammadrid556ssad@gmail.com
+[2026-07-25 07:02:53] Patient login, staff session cleared
+[2026-07-25 07:02:53] ✅ Login successful for user: sammadrid556ssad@gmail.com
+[2026-07-25 07:23:12] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 07:23:12] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 07:23:12] MySQLi connection established successfully
+[2026-07-25 07:23:12] Raw input received: {"email":"sammadridssffa556@gmail.com","password":"aaaaaaaa","rememberMe":true}
+[2026-07-25 07:23:12] Decoded input: Array
+(
+    [email] => sammadridssffa556@gmail.com
+    [password] => aaaaaaaa
+    [rememberMe] => 1
+)
+
+[2026-07-25 07:23:12] Login attempt for email: sammadridssffa556@gmail.com
+[2026-07-25 07:23:12] Patient login, staff session cleared
+[2026-07-25 07:23:12] ✅ Login successful for user: sammadridssffa556@gmail.com
+[2026-07-25 07:28:02] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 07:28:02] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 07:28:02] MySQLi connection established successfully
+[2026-07-25 07:28:02] Raw input received: {"email":"sammadridasddsaasd556@gmail.com","password":"asdasdasd","rememberMe":true}
+[2026-07-25 07:28:02] Decoded input: Array
+(
+    [email] => sammadridasddsaasd556@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 1
+)
+
+[2026-07-25 07:28:02] Login attempt for email: sammadridasddsaasd556@gmail.com
+[2026-07-25 07:28:02] Patient login, staff session cleared
+[2026-07-25 07:28:02] ✅ Login successful for user: sammadridasddsaasd556@gmail.com
+[2026-07-25 07:31:33] === LOGIN REQUEST RECEIVED ===
+[2026-07-25 07:31:33] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-25 07:31:33] MySQLi connection established successfully
+[2026-07-25 07:31:33] Raw input received: {"email":"samma22sqedrid556@gmail.com","password":"asdasdasd","rememberMe":true}
+[2026-07-25 07:31:33] Decoded input: Array
+(
+    [email] => samma22sqedrid556@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 1
+)
+
+[2026-07-25 07:31:33] Login attempt for email: samma22sqedrid556@gmail.com
+[2026-07-25 07:31:33] Patient login, staff session cleared
+[2026-07-25 07:31:33] ✅ Login successful for user: samma22sqedrid556@gmail.com
+[2026-07-27 05:50:05] === LOGIN REQUEST RECEIVED ===
+[2026-07-27 05:50:05] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-27 05:50:05] MySQLi connection established successfully
+[2026-07-27 05:50:05] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-27 05:50:05] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-27 05:50:05] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-27 05:50:05] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-07-27 05:50:05] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiagos
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiagos
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-07-27 05:50:05] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-27 08:38:29] === LOGIN REQUEST RECEIVED ===
+[2026-07-27 08:38:29] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-27 08:38:29] MySQLi connection established successfully
+[2026-07-27 08:38:29] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-27 08:38:29] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-27 08:38:29] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-07-27 08:38:29] Patient login, staff session cleared
+[2026-07-27 08:38:29] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-07-28 04:14:46] === LOGIN REQUEST RECEIVED ===
+[2026-07-28 04:14:46] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-28 04:14:46] MySQLi connection established successfully
+[2026-07-28 04:14:46] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-28 04:14:46] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-28 04:14:46] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-07-28 04:14:46] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-07-28 04:14:46] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiagos
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiagos
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-07-28 04:14:46] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-07-28 04:15:42] === LOGIN REQUEST RECEIVED ===
+[2026-07-28 04:15:42] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-28 04:15:42] MySQLi connection established successfully
+[2026-07-28 04:15:42] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-28 04:15:42] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-28 04:15:42] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-07-28 04:15:42] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-07-28 04:15:42] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-07-28 04:15:42] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-07-28 05:38:30] === LOGIN REQUEST RECEIVED ===
+[2026-07-28 05:38:30] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-28 05:38:30] MySQLi connection established successfully
+[2026-07-28 05:38:30] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-28 05:38:30] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-28 05:38:30] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-07-28 05:38:30] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-07-28 05:38:30] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-07-28 05:38:30] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-07-28 08:26:12] === LOGIN REQUEST RECEIVED ===
+[2026-07-28 08:26:12] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-28 08:26:12] MySQLi connection established successfully
+[2026-07-28 08:26:12] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-28 08:26:12] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-28 08:26:12] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-07-28 08:26:12] Patient login, staff session cleared
+[2026-07-28 08:26:12] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-07-31 01:54:43] === LOGIN REQUEST RECEIVED ===
+[2026-07-31 01:54:43] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-07-31 01:54:43] MySQLi connection established successfully
+[2026-07-31 01:54:43] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-07-31 01:54:43] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-07-31 01:54:43] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-07-31 01:54:43] Patient login, staff session cleared
+[2026-07-31 01:54:43] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-08-03 04:40:50] === LOGIN REQUEST RECEIVED ===
+[2026-08-03 04:40:50] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-08-03 04:40:50] MySQLi connection established successfully
+[2026-08-03 04:40:50] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-08-03 04:40:50] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-08-03 04:40:50] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-08-03 04:40:50] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-08-03 04:40:50] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiagos
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiagos
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-08-03 04:40:50] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-09-12 14:00:22] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:00:22] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:00:22] MySQLi connection established successfully
+[2026-09-12 14:00:22] Raw input received: {"email":"santiagojhonny607@gmail.com","password":"admin","rememberMe":false}
+[2026-09-12 14:00:22] Decoded input: Array
+(
+    [email] => santiagojhonny607@gmail.com
+    [password] => admin
+    [rememberMe] => 
+)
+
+[2026-09-12 14:00:22] Login attempt for email: santiagojhonny607@gmail.com
+[2026-09-12 14:00:22] ❌ Login failed: Invalid email or password
+[2026-09-12 14:00:29] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:00:29] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:00:29] MySQLi connection established successfully
+[2026-09-12 14:00:29] Raw input received: {"email":"santiagojhonny607@gmail.com","password":"Admin","rememberMe":false}
+[2026-09-12 14:00:29] Decoded input: Array
+(
+    [email] => santiagojhonny607@gmail.com
+    [password] => Admin
+    [rememberMe] => 
+)
+
+[2026-09-12 14:00:29] Login attempt for email: santiagojhonny607@gmail.com
+[2026-09-12 14:00:29] ❌ Login failed: Invalid email or password
+[2026-09-12 14:00:35] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:00:35] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:00:35] MySQLi connection established successfully
+[2026-09-12 14:00:35] Raw input received: {"email":"santiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-12 14:00:35] Decoded input: Array
+(
+    [email] => santiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-12 14:00:35] Login attempt for email: santiagojhonny607@gmail.com
+[2026-09-12 14:00:35] ❌ Login failed: Invalid email or password
+[2026-09-12 14:00:49] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:00:49] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:00:49] MySQLi connection established successfully
+[2026-09-12 14:00:49] Raw input received: {"email":"santiagojhonny607@gmail.com","password":"asdasdasd","rememberMe":false}
+[2026-09-12 14:00:49] Decoded input: Array
+(
+    [email] => santiagojhonny607@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 
+)
+
+[2026-09-12 14:00:49] Login attempt for email: santiagojhonny607@gmail.com
+[2026-09-12 14:00:49] ❌ Login failed: Invalid email or password
+[2026-09-12 14:00:56] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:00:56] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:00:56] MySQLi connection established successfully
+[2026-09-12 14:00:56] Raw input received: {"email":"santiagojhonny607@gmail.com","password":"607_Labitag","rememberMe":false}
+[2026-09-12 14:00:56] Decoded input: Array
+(
+    [email] => santiagojhonny607@gmail.com
+    [password] => 607_Labitag
+    [rememberMe] => 
+)
+
+[2026-09-12 14:00:56] Login attempt for email: santiagojhonny607@gmail.com
+[2026-09-12 14:00:56] ❌ Login failed: Invalid email or password
+[2026-09-12 14:01:36] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:01:36] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:01:36] MySQLi connection established successfully
+[2026-09-12 14:01:36] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-12 14:01:36] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-12 14:01:36] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-09-12 14:01:36] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-09-12 14:01:36] Session data: Array
+(
+    [csrf_token] => 341ba451429aca6b9504c3ecb8a77cdc556db1dff384f38e68f9e7e69c0dd880
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiagos
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiagos
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-09-12 14:01:36] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-09-12 14:03:00] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:03:00] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:03:00] MySQLi connection established successfully
+[2026-09-12 14:03:00] Raw input received: {"email":"sammadridd556@gmail.com","password":"132456789","rememberMe":false}
+[2026-09-12 14:03:00] Decoded input: Array
+(
+    [email] => sammadridd556@gmail.com
+    [password] => 132456789
+    [rememberMe] => 
+)
+
+[2026-09-12 14:03:00] Login attempt for email: sammadridd556@gmail.com
+[2026-09-12 14:03:00] ❌ Login failed: Invalid email or password
+[2026-09-12 14:03:16] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:03:16] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:03:16] MySQLi connection established successfully
+[2026-09-12 14:03:16] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"132456789","rememberMe":false}
+[2026-09-12 14:03:16] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 132456789
+    [rememberMe] => 
+)
+
+[2026-09-12 14:03:16] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-12 14:03:16] ❌ Login failed: Invalid email or password
+[2026-09-12 14:03:25] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:03:25] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:03:25] MySQLi connection established successfully
+[2026-09-12 14:03:25] Raw input received: {"email":"sammasdasfgrid556@gmail.com","password":"132456789","rememberMe":false}
+[2026-09-12 14:03:25] Decoded input: Array
+(
+    [email] => sammasdasfgrid556@gmail.com
+    [password] => 132456789
+    [rememberMe] => 
+)
+
+[2026-09-12 14:03:25] Login attempt for email: sammasdasfgrid556@gmail.com
+[2026-09-12 14:03:25] ❌ Login failed: Invalid email or password
+[2026-09-12 14:03:41] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:03:41] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:03:41] MySQLi connection established successfully
+[2026-09-12 14:03:41] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"132456789","rememberMe":false}
+[2026-09-12 14:03:41] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 132456789
+    [rememberMe] => 
+)
+
+[2026-09-12 14:03:41] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-12 14:03:41] ❌ Login failed: Invalid email or password
+[2026-09-12 14:04:21] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:04:21] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:04:21] MySQLi connection established successfully
+[2026-09-12 14:04:21] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-12 14:04:21] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-12 14:04:21] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-12 14:04:21] Patient login, staff session cleared
+[2026-09-12 14:04:21] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-09-12 14:05:45] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:05:45] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:05:45] MySQLi connection established successfully
+[2026-09-12 14:05:45] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-12 14:05:45] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-12 14:05:45] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-12 14:05:45] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-12 14:05:45] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-12 14:05:45] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-12 14:42:32] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:42:32] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:42:32] MySQLi connection established successfully
+[2026-09-12 14:42:32] Raw input received: {"email":"ssammadrid556@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-12 14:42:32] Decoded input: Array
+(
+    [email] => ssammadrid556@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-12 14:42:32] Login attempt for email: ssammadrid556@gmail.com
+[2026-09-12 14:42:32] ❌ Login failed: Invalid email or password
+[2026-09-12 14:42:42] === LOGIN REQUEST RECEIVED ===
+[2026-09-12 14:42:42] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-12 14:42:42] MySQLi connection established successfully
+[2026-09-12 14:42:42] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-12 14:42:42] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-12 14:42:42] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-12 14:42:42] Patient login, staff session cleared
+[2026-09-12 14:42:42] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-09-13 07:44:26] === LOGIN REQUEST RECEIVED ===
+[2026-09-13 07:44:26] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-13 07:44:26] MySQLi connection established successfully
+[2026-09-13 07:44:26] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-13 07:44:26] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-13 07:44:26] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-09-13 07:44:26] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-09-13 07:44:26] Session data: Array
+(
+    [csrf_token] => d535dcf0ddbdc2a26b84a3932c4a3984bcb3f6a1656bfa12758f66fe39838d80
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiagos
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiagos
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-09-13 07:44:26] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-09-13 07:49:05] === LOGIN REQUEST RECEIVED ===
+[2026-09-13 07:49:05] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-13 07:49:05] MySQLi connection established successfully
+[2026-09-13 07:49:05] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-13 07:49:05] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-13 07:49:05] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-13 07:49:05] Patient login, staff session cleared
+[2026-09-13 07:49:05] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-09-13 08:15:39] === LOGIN REQUEST RECEIVED ===
+[2026-09-13 08:15:39] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-13 08:15:39] MySQLi connection established successfully
+[2026-09-13 08:15:39] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-13 08:15:39] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-13 08:15:39] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-13 08:15:39] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-13 08:15:39] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-13 08:15:39] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-15 00:30:41] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 00:30:41] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 00:30:41] MySQLi connection established successfully
+[2026-09-15 00:30:41] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-15 00:30:41] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-15 00:30:41] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-09-15 00:30:41] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-09-15 00:30:41] Session data: Array
+(
+    [csrf_token] => 5c02c6fabd1ad8d0aaa3481f143010568f028818bc4ce809ddc5e3f6fa3df24e
+    [user_id] => 1
+    [username] => admin
+    [role] => admin
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiagos
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiagos
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-09-15 00:30:41] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-09-15 00:31:16] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 00:31:16] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 00:31:16] MySQLi connection established successfully
+[2026-09-15 00:31:16] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-15 00:31:16] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-15 00:31:16] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-15 00:31:16] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-15 00:31:16] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-15 00:31:16] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-15 00:31:57] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 00:31:57] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 00:31:57] MySQLi connection established successfully
+[2026-09-15 00:31:57] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678\\\\","rememberMe":false}
+[2026-09-15 00:31:57] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678\\
+    [rememberMe] => 
+)
+
+[2026-09-15 00:31:57] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-15 00:31:57] ❌ Login failed: Invalid email or password
+[2026-09-15 00:32:00] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 00:32:00] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 00:32:00] MySQLi connection established successfully
+[2026-09-15 00:32:00] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-15 00:32:00] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-15 00:32:00] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-15 00:32:00] Patient login, staff session cleared
+[2026-09-15 00:32:00] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-09-15 01:17:26] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 01:17:26] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 01:17:26] MySQLi connection established successfully
+[2026-09-15 01:17:26] Raw input received: {"email":"santiagojhonny607@gmail.com","password":"987654321","rememberMe":false}
+[2026-09-15 01:17:26] Decoded input: Array
+(
+    [email] => santiagojhonny607@gmail.com
+    [password] => 987654321
+    [rememberMe] => 
+)
+
+[2026-09-15 01:17:26] Login attempt for email: santiagojhonny607@gmail.com
+[2026-09-15 01:17:26] ❌ Login failed: Invalid email or password
+[2026-09-15 01:17:58] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 01:17:58] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 01:17:58] MySQLi connection established successfully
+[2026-09-15 01:17:58] Raw input received: {"email":"santiagojhonn607@gmail.com","password":"987654321","rememberMe":false}
+[2026-09-15 01:17:58] Decoded input: Array
+(
+    [email] => santiagojhonn607@gmail.com
+    [password] => 987654321
+    [rememberMe] => 
+)
+
+[2026-09-15 01:17:58] Login attempt for email: santiagojhonn607@gmail.com
+[2026-09-15 01:17:58] Patient login, staff session cleared
+[2026-09-15 01:17:58] ✅ Login successful for user: santiagojhonn607@gmail.com
+[2026-09-15 01:39:42] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 01:39:42] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 01:39:43] MySQLi connection established successfully
+[2026-09-15 01:39:43] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-15 01:39:43] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-15 01:39:43] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-09-15 01:39:43] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-09-15 01:39:43] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiagos
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiagos
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-09-15 01:39:43] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-09-15 07:33:20] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 07:33:20] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 07:33:21] MySQLi connection established successfully
+[2026-09-15 07:33:21] Raw input received: {"email":"santiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-15 07:33:21] Decoded input: Array
+(
+    [email] => santiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-15 07:33:21] Login attempt for email: santiagojhonny607@gmail.com
+[2026-09-15 07:33:21] ❌ Login failed: Invalid email or password
+[2026-09-15 07:33:23] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 07:33:23] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 07:33:23] MySQLi connection established successfully
+[2026-09-15 07:33:23] Raw input received: {"email":"santiagojhonny607@gmail.com","password":"123456789","rememberMe":false}
+[2026-09-15 07:33:23] Decoded input: Array
+(
+    [email] => santiagojhonny607@gmail.com
+    [password] => 123456789
+    [rememberMe] => 
+)
+
+[2026-09-15 07:33:23] Login attempt for email: santiagojhonny607@gmail.com
+[2026-09-15 07:33:23] ❌ Login failed: Invalid email or password
+[2026-09-15 07:33:31] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 07:33:31] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 07:33:31] MySQLi connection established successfully
+[2026-09-15 07:33:31] Raw input received: {"email":"santiagojhonny607@gmail.com","password":"asdasdasd","rememberMe":false}
+[2026-09-15 07:33:31] Decoded input: Array
+(
+    [email] => santiagojhonny607@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 
+)
+
+[2026-09-15 07:33:31] Login attempt for email: santiagojhonny607@gmail.com
+[2026-09-15 07:33:31] ❌ Login failed: Invalid email or password
+[2026-09-15 07:33:46] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 07:33:46] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 07:33:46] MySQLi connection established successfully
+[2026-09-15 07:33:46] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"asdasdasd","rememberMe":false}
+[2026-09-15 07:33:46] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 
+)
+
+[2026-09-15 07:33:46] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-09-15 07:33:46] ❌ Login failed: Invalid email or password
+[2026-09-15 07:33:52] === LOGIN REQUEST RECEIVED ===
+[2026-09-15 07:33:52] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-15 07:33:52] MySQLi connection established successfully
+[2026-09-15 07:33:52] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-15 07:33:52] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-15 07:33:52] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-09-15 07:33:52] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-09-15 07:33:52] Session data: Array
+(
+    [csrf_token] => e08cf0d0646345dffafc672ee861607728f73625ef85684011136e3dcefd47a7
+    [user_id] => 1
+    [email] => santiagojhonny607@gmail.com
+    [role] => admin
+    [logged_in] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-09-15 07:33:52] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-09-18 07:05:47] === LOGIN REQUEST RECEIVED ===
+[2026-09-18 07:05:47] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-18 07:05:47] MySQLi connection established successfully
+[2026-09-18 07:05:47] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-18 07:05:47] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-18 07:05:47] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-18 07:05:47] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-18 07:05:47] Session data: Array
+(
+    [user_id] => 22
+    [username] => choy
+    [email] => choyabitona@gmail.com
+    [role] => trainer
+    [csrf_token] => 980a8f94c07a487dbdfd3a49409ffa3d1533b4cdf987b21d9b39a808d4836dab
+    [logged_in] => 1
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-18 07:05:47] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-18 07:32:10] === LOGIN REQUEST RECEIVED ===
+[2026-09-18 07:32:10] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-18 07:32:10] MySQLi connection established successfully
+[2026-09-18 07:32:10] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-18 07:32:10] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-18 07:32:10] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-09-18 07:32:10] Patient login, staff session cleared
+[2026-09-18 07:32:10] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-09-18 08:15:04] === LOGIN REQUEST RECEIVED ===
+[2026-09-18 08:15:04] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-18 08:15:04] MySQLi connection established successfully
+[2026-09-18 08:15:04] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-18 08:15:04] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-18 08:15:04] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-09-18 08:15:04] Patient login, staff session cleared
+[2026-09-18 08:15:04] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-09-18 08:15:57] === LOGIN REQUEST RECEIVED ===
+[2026-09-18 08:15:57] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-18 08:15:57] MySQLi connection established successfully
+[2026-09-18 08:15:57] Raw input received: {"email":"pulmonesmasdarjorie8sd@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-18 08:15:57] Decoded input: Array
+(
+    [email] => pulmonesmasdarjorie8sd@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-18 08:15:57] Login attempt for email: pulmonesmasdarjorie8sd@gmail.com
+[2026-09-18 08:15:57] ❌ Login failed: Invalid email or password
+[2026-09-18 08:16:01] === LOGIN REQUEST RECEIVED ===
+[2026-09-18 08:16:01] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-18 08:16:01] MySQLi connection established successfully
+[2026-09-18 08:16:01] Raw input received: {"email":"pulmonesmasdarjorie8sd@gmail.com","password":"123456789","rememberMe":false}
+[2026-09-18 08:16:01] Decoded input: Array
+(
+    [email] => pulmonesmasdarjorie8sd@gmail.com
+    [password] => 123456789
+    [rememberMe] => 
+)
+
+[2026-09-18 08:16:01] Login attempt for email: pulmonesmasdarjorie8sd@gmail.com
+[2026-09-18 08:16:01] ❌ Login failed: Invalid email or password
+[2026-09-18 08:16:09] === LOGIN REQUEST RECEIVED ===
+[2026-09-18 08:16:09] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-18 08:16:09] MySQLi connection established successfully
+[2026-09-18 08:16:09] Raw input received: {"email":"pulmonesmasdarjorie8sd@gmail.com","password":"123456789","rememberMe":false}
+[2026-09-18 08:16:09] Decoded input: Array
+(
+    [email] => pulmonesmasdarjorie8sd@gmail.com
+    [password] => 123456789
+    [rememberMe] => 
+)
+
+[2026-09-18 08:16:09] Login attempt for email: pulmonesmasdarjorie8sd@gmail.com
+[2026-09-18 08:16:09] ❌ Login failed: Invalid email or password
+[2026-09-18 08:16:11] === LOGIN REQUEST RECEIVED ===
+[2026-09-18 08:16:11] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-18 08:16:11] MySQLi connection established successfully
+[2026-09-18 08:16:11] Raw input received: {"email":"pulmonesmasdarjorie8sd@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-18 08:16:11] Decoded input: Array
+(
+    [email] => pulmonesmasdarjorie8sd@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-18 08:16:11] Login attempt for email: pulmonesmasdarjorie8sd@gmail.com
+[2026-09-18 08:16:11] Patient login, staff session cleared
+[2026-09-18 08:16:11] ✅ Login successful for user: pulmonesmasdarjorie8sd@gmail.com
+[2026-09-18 08:19:04] === LOGIN REQUEST RECEIVED ===
+[2026-09-18 08:19:04] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-18 08:19:04] MySQLi connection established successfully
+[2026-09-18 08:19:04] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-18 08:19:04] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-18 08:19:04] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-09-18 08:19:04] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-09-18 08:19:04] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-09-18 08:19:04] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-09-29 12:39:37] === LOGIN REQUEST RECEIVED ===
+[2026-09-29 12:39:37] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-29 12:39:37] MySQLi connection established successfully
+[2026-09-29 12:39:37] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-29 12:39:37] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-29 12:39:37] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-09-29 12:39:37] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-09-29 12:39:37] Session data: Array
+(
+    [csrf_token] => c99ca4cd878982c4ba8861270503a942422225708bb9b9948218ec131241c7a1
+    [user_id] => 1
+    [username] => admins
+    [email] => asdasdas
+    [role] => admin
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-09-29 12:39:37] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-09-29 12:44:57] === LOGIN REQUEST RECEIVED ===
+[2026-09-29 12:44:57] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-29 12:44:57] MySQLi connection established successfully
+[2026-09-29 12:44:57] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-29 12:44:57] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-29 12:44:57] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-29 12:44:57] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-29 12:44:57] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-29 12:44:57] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-29 12:47:52] === LOGIN REQUEST RECEIVED ===
+[2026-09-29 12:47:52] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-29 12:47:52] MySQLi connection established successfully
+[2026-09-29 12:47:52] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-29 12:47:52] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-29 12:47:52] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-09-29 12:47:52] Patient login, staff session cleared
+[2026-09-29 12:47:52] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-09-29 13:29:37] === LOGIN REQUEST RECEIVED ===
+[2026-09-29 13:29:37] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-29 13:29:37] MySQLi connection established successfully
+[2026-09-29 13:29:37] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-29 13:29:37] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-29 13:29:37] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-09-29 13:29:37] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-09-29 13:29:37] Session data: Array
+(
+    [csrf_token] => ecbf03860c7134e0a4ecda1e20035b5d4a4728b1a46d6d14c89e75c00b848a68
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-09-29 13:29:37] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-09-29 13:29:55] === LOGIN REQUEST RECEIVED ===
+[2026-09-29 13:29:55] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-29 13:29:55] MySQLi connection established successfully
+[2026-09-29 13:29:55] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-29 13:29:55] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-29 13:29:55] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-09-29 13:29:55] Patient login, staff session cleared
+[2026-09-29 13:29:55] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-09-29 13:30:14] === LOGIN REQUEST RECEIVED ===
+[2026-09-29 13:30:14] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-29 13:30:14] MySQLi connection established successfully
+[2026-09-29 13:30:14] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-29 13:30:14] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-29 13:30:14] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-29 13:30:14] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-29 13:30:14] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-29 13:30:14] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-30 00:56:40] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 00:56:40] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 00:56:40] MySQLi connection established successfully
+[2026-09-30 00:56:40] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 00:56:40] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 00:56:40] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-09-30 00:56:40] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-09-30 00:56:40] Session data: Array
+(
+    [user_id] => 1
+    [username] => imee
+    [email] => imeehael5@gmail.com
+    [role] => member
+    [csrf_token] => 00d22b43539d62e05c27a5af8dc408679bbbc461b421c908a95a5daf49c93d4f
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-09-30 00:56:40] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-09-30 01:12:06] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 01:12:06] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 01:12:06] MySQLi connection established successfully
+[2026-09-30 01:12:06] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 01:12:06] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 01:12:06] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-30 01:12:06] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-30 01:12:06] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-30 01:12:06] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-30 02:28:57] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 02:28:57] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 02:28:57] MySQLi connection established successfully
+[2026-09-30 02:28:57] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 02:28:57] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 02:28:57] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-30 02:28:57] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-30 02:28:57] Session data: Array
+(
+    [booking_data] => Array
+        (
+            [phone] => +639388631221
+            [email] => pulmonesmdrjorie8@gmail.com
+            [services] => Array
+                (
+                    [0] => 1
+                )
+
+            [termsAccepted] => 1
+            [privacyAccepted] => 1
+        )
+
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-30 02:28:57] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-30 02:31:44] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 02:31:44] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 02:31:44] MySQLi connection established successfully
+[2026-09-30 02:31:44] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 02:31:44] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 02:31:44] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-30 02:31:44] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-30 02:31:44] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-30 02:31:44] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-30 02:31:58] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 02:31:58] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 02:31:58] MySQLi connection established successfully
+[2026-09-30 02:31:58] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 02:31:58] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 02:31:58] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-09-30 02:31:58] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-09-30 02:31:58] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-09-30 02:31:58] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-09-30 02:50:17] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 02:50:17] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 02:50:17] MySQLi connection established successfully
+[2026-09-30 02:50:17] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 02:50:17] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 02:50:17] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-30 02:50:17] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-30 02:50:17] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-30 02:50:17] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-30 02:58:41] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 02:58:41] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 02:58:41] MySQLi connection established successfully
+[2026-09-30 02:58:41] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 02:58:41] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 02:58:41] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-30 02:58:41] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-30 02:58:41] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-30 02:58:41] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-30 03:12:42] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 03:12:42] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 03:12:42] MySQLi connection established successfully
+[2026-09-30 03:12:42] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 03:12:42] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 03:12:42] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-30 03:12:42] Patient login, staff session cleared
+[2026-09-30 03:12:42] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-09-30 03:15:17] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 03:15:17] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 03:15:17] MySQLi connection established successfully
+[2026-09-30 03:15:17] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 03:15:17] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 03:15:17] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-30 03:15:17] Patient login, staff session cleared
+[2026-09-30 03:15:17] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-09-30 03:21:21] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 03:21:21] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 03:21:21] MySQLi connection established successfully
+[2026-09-30 03:21:21] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 03:21:21] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 03:21:21] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-30 03:21:21] Patient login, staff session cleared
+[2026-09-30 03:21:21] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-09-30 03:26:34] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 03:26:34] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 03:26:34] MySQLi connection established successfully
+[2026-09-30 03:26:34] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 03:26:34] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 03:26:34] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-30 03:26:34] Patient login, staff session cleared
+[2026-09-30 03:26:34] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-09-30 03:31:49] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 03:31:49] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 03:31:49] MySQLi connection established successfully
+[2026-09-30 03:31:49] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 03:31:49] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 03:31:49] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-09-30 03:31:49] Patient login, staff session cleared
+[2026-09-30 03:31:49] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-09-30 03:36:24] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 03:36:24] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 03:36:24] MySQLi connection established successfully
+[2026-09-30 03:36:24] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 03:36:24] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 03:36:24] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-30 03:36:24] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-30 03:36:24] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-30 03:36:24] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-09-30 03:36:37] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 03:36:37] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 03:36:37] MySQLi connection established successfully
+[2026-09-30 03:36:37] Raw input received: {"email":"lumie467@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 03:36:37] Decoded input: Array
+(
+    [email] => lumie467@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 03:36:37] Login attempt for email: lumie467@gmail.com
+[2026-09-30 03:36:37] ❌ Login failed: Invalid email or password
+[2026-09-30 03:36:42] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 03:36:42] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 03:36:42] MySQLi connection established successfully
+[2026-09-30 03:36:42] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 03:36:42] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 03:36:42] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-30 03:36:42] Patient login, staff session cleared
+[2026-09-30 03:36:42] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-09-30 05:16:49] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 05:16:49] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 05:16:49] MySQLi connection established successfully
+[2026-09-30 05:16:49] Raw input received: {"email":"pulmonesmarjsorie8@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 05:16:49] Decoded input: Array
+(
+    [email] => pulmonesmarjsorie8@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 05:16:49] Login attempt for email: pulmonesmarjsorie8@gmail.com
+[2026-09-30 05:16:49] Patient login, staff session cleared
+[2026-09-30 05:16:49] ✅ Login successful for user: pulmonesmarjsorie8@gmail.com
+[2026-09-30 05:17:31] === LOGIN REQUEST RECEIVED ===
+[2026-09-30 05:17:31] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-09-30 05:17:31] MySQLi connection established successfully
+[2026-09-30 05:17:31] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-09-30 05:17:31] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-09-30 05:17:31] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-09-30 05:17:31] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-09-30 05:17:31] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-09-30 05:17:31] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-07 14:11:38] === LOGIN REQUEST RECEIVED ===
+[2026-10-07 14:11:38] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-07 14:11:38] MySQLi connection established successfully
+[2026-10-07 14:11:38] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-07 14:11:38] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-07 14:11:38] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-07 14:11:38] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-07 14:11:38] Session data: Array
+(
+    [user_id] => 1
+    [username] => argem lloyd pascua
+    [email] => argemlloydpascua@ggmail.com
+    [role] => member
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-07 14:11:38] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-07 14:12:26] === LOGIN REQUEST RECEIVED ===
+[2026-10-07 14:12:26] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-07 14:12:26] MySQLi connection established successfully
+[2026-10-07 14:12:26] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-07 14:12:26] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-07 14:12:26] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-07 14:12:26] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-07 14:12:26] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-07 14:12:26] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-07 14:12:51] === LOGIN REQUEST RECEIVED ===
+[2026-10-07 14:12:51] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-07 14:12:51] MySQLi connection established successfully
+[2026-10-07 14:12:51] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-07 14:12:51] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-07 14:12:51] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-10-07 14:12:51] Patient login, staff session cleared
+[2026-10-07 14:12:51] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-10-07 14:44:37] === LOGIN REQUEST RECEIVED ===
+[2026-10-07 14:44:37] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-07 14:44:37] MySQLi connection established successfully
+[2026-10-07 14:44:37] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-07 14:44:37] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-07 14:44:37] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-07 14:44:37] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-07 14:44:37] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-07 14:44:37] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-08 02:58:52] === LOGIN REQUEST RECEIVED ===
+[2026-10-08 02:58:52] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-08 02:58:52] MySQLi connection established successfully
+[2026-10-08 02:58:52] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-08 02:58:52] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-08 02:58:52] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-08 02:58:52] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-08 02:58:52] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-08 02:58:52] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-08 03:21:50] === LOGIN REQUEST RECEIVED ===
+[2026-10-08 03:21:50] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-08 03:21:50] MySQLi connection established successfully
+[2026-10-08 03:21:50] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-08 03:21:50] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-08 03:21:50] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-10-08 03:21:50] Patient login, staff session cleared
+[2026-10-08 03:21:50] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-10-08 13:40:34] === LOGIN REQUEST RECEIVED ===
+[2026-10-08 13:40:34] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-08 13:40:34] MySQLi connection established successfully
+[2026-10-08 13:40:34] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-08 13:40:34] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-08 13:40:34] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-08 13:40:34] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-08 13:40:34] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-08 13:40:34] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-08 13:41:10] === LOGIN REQUEST RECEIVED ===
+[2026-10-08 13:41:10] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-08 13:41:10] MySQLi connection established successfully
+[2026-10-08 13:41:10] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-08 13:41:10] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-08 13:41:10] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-10-08 13:41:10] Patient login, staff session cleared
+[2026-10-08 13:41:10] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-10-08 15:35:38] === LOGIN REQUEST RECEIVED ===
+[2026-10-08 15:35:38] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-08 15:35:38] MySQLi connection established successfully
+[2026-10-08 15:35:38] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-08 15:35:38] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-08 15:35:38] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-10-08 15:35:38] Patient login, staff session cleared
+[2026-10-08 15:35:38] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-10-08 15:37:29] === LOGIN REQUEST RECEIVED ===
+[2026-10-08 15:37:29] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-08 15:37:29] MySQLi connection established successfully
+[2026-10-08 15:37:29] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-08 15:37:29] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-08 15:37:29] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-08 15:37:29] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-08 15:37:29] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-08 15:37:29] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-08 16:01:43] === LOGIN REQUEST RECEIVED ===
+[2026-10-08 16:01:43] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-08 16:01:43] MySQLi connection established successfully
+[2026-10-08 16:01:43] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-08 16:01:43] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-08 16:01:43] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-08 16:01:43] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-08 16:01:43] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-08 16:01:43] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-08 16:14:40] === LOGIN REQUEST RECEIVED ===
+[2026-10-08 16:14:40] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-08 16:14:40] MySQLi connection established successfully
+[2026-10-08 16:14:40] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-08 16:14:40] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-08 16:14:40] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-10-08 16:14:40] Patient login, staff session cleared
+[2026-10-08 16:14:40] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-10-08 16:18:19] === LOGIN REQUEST RECEIVED ===
+[2026-10-08 16:18:19] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-08 16:18:19] MySQLi connection established successfully
+[2026-10-08 16:18:19] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-08 16:18:19] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-08 16:18:19] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-08 16:18:19] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-08 16:18:19] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-08 16:18:19] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-08 16:30:02] === LOGIN REQUEST RECEIVED ===
+[2026-10-08 16:30:02] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-08 16:30:02] MySQLi connection established successfully
+[2026-10-08 16:30:02] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-08 16:30:02] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-08 16:30:02] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-08 16:30:02] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-08 16:30:02] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-08 16:30:02] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-11 03:11:12] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 03:11:12] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 03:11:12] MySQLi connection established successfully
+[2026-10-11 03:11:12] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"asdasdasd","rememberMe":false}
+[2026-10-11 03:11:12] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => asdasdasd
+    [rememberMe] => 
+)
+
+[2026-10-11 03:11:12] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-11 03:11:12] ❌ Login failed: Invalid email or password
+[2026-10-11 03:11:16] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 03:11:16] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 03:11:16] MySQLi connection established successfully
+[2026-10-11 03:11:16] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-11 03:11:16] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-11 03:11:16] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-11 03:11:16] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-11 03:11:16] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-11 03:11:16] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-11 03:14:28] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 03:14:28] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 03:14:28] MySQLi connection established successfully
+[2026-10-11 03:14:28] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-11 03:14:28] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-11 03:14:28] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-11 03:14:28] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-11 03:14:28] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-11 03:14:28] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-11 04:09:30] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 04:09:30] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 04:09:30] MySQLi connection established successfully
+[2026-10-11 04:09:30] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-11 04:09:30] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-11 04:09:30] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-11 04:09:30] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-11 04:09:30] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-11 04:09:30] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-11 04:25:02] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 04:25:02] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 04:25:02] MySQLi connection established successfully
+[2026-10-11 04:25:02] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-11 04:25:02] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-11 04:25:02] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-11 04:25:02] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-11 04:25:02] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-11 04:25:02] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-11 04:45:22] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 04:45:22] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 04:45:22] MySQLi connection established successfully
+[2026-10-11 04:45:22] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-11 04:45:22] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-11 04:45:22] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-11 04:45:22] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-11 04:45:22] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-11 04:45:22] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-11 05:55:30] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 05:55:30] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 05:55:30] MySQLi connection established successfully
+[2026-10-11 05:55:30] Raw input received: {"email":"pulmonesmarjoridas8@gmail.com","password":"peuEq8ZnOv","rememberMe":false}
+[2026-10-11 05:55:30] Decoded input: Array
+(
+    [email] => pulmonesmarjoridas8@gmail.com
+    [password] => peuEq8ZnOv
+    [rememberMe] => 
+)
+
+[2026-10-11 05:55:30] Login attempt for email: pulmonesmarjoridas8@gmail.com
+[2026-10-11 05:55:30] Patient login, staff session cleared
+[2026-10-11 05:55:30] ✅ Login successful for user: pulmonesmarjoridas8@gmail.com
+[2026-10-11 06:04:09] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 06:04:09] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 06:04:09] MySQLi connection established successfully
+[2026-10-11 06:04:09] Raw input received: {"email":"pulmonesmarjoridas8@gmail.com","password":"peuEq8ZnOv","rememberMe":false}
+[2026-10-11 06:04:09] Decoded input: Array
+(
+    [email] => pulmonesmarjoridas8@gmail.com
+    [password] => peuEq8ZnOv
+    [rememberMe] => 
+)
+
+[2026-10-11 06:04:09] Login attempt for email: pulmonesmarjoridas8@gmail.com
+[2026-10-11 06:04:09] Patient login, staff session cleared
+[2026-10-11 06:04:09] ✅ Login successful for user: pulmonesmarjoridas8@gmail.com
+[2026-10-11 06:37:47] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 06:37:47] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 06:37:47] MySQLi connection established successfully
+[2026-10-11 06:37:47] Raw input received: {"email":"pulmonesmarjoridas8@gmail.com","password":"peuEq8ZnOv","rememberMe":false}
+[2026-10-11 06:37:47] Decoded input: Array
+(
+    [email] => pulmonesmarjoridas8@gmail.com
+    [password] => peuEq8ZnOv
+    [rememberMe] => 
+)
+
+[2026-10-11 06:37:47] Login attempt for email: pulmonesmarjoridas8@gmail.com
+[2026-10-11 06:37:47] ❌ Login failed: Invalid email or password
+[2026-10-11 06:37:51] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 06:37:51] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 06:37:51] MySQLi connection established successfully
+[2026-10-11 06:37:51] Raw input received: {"email":"pulmonesmarjoridas8@gmail.com","password":"peuEq8ZnOv","rememberMe":false}
+[2026-10-11 06:37:51] Decoded input: Array
+(
+    [email] => pulmonesmarjoridas8@gmail.com
+    [password] => peuEq8ZnOv
+    [rememberMe] => 
+)
+
+[2026-10-11 06:37:51] Login attempt for email: pulmonesmarjoridas8@gmail.com
+[2026-10-11 06:37:51] ❌ Login failed: Invalid email or password
+[2026-10-11 06:38:45] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 06:38:45] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 06:38:45] MySQLi connection established successfully
+[2026-10-11 06:38:45] Raw input received: {"email":"pulmonesmarjoridas8@gmail.com","password":"wQnt$68ONJ","rememberMe":false}
+[2026-10-11 06:38:45] Decoded input: Array
+(
+    [email] => pulmonesmarjoridas8@gmail.com
+    [password] => wQnt$68ONJ
+    [rememberMe] => 
+)
+
+[2026-10-11 06:38:45] Login attempt for email: pulmonesmarjoridas8@gmail.com
+[2026-10-11 06:38:45] Patient login, staff session cleared
+[2026-10-11 06:38:45] ✅ Login successful for user: pulmonesmarjoridas8@gmail.com
+[2026-10-11 06:47:00] === LOGIN REQUEST RECEIVED ===
+[2026-10-11 06:47:00] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-11 06:47:01] MySQLi connection established successfully
+[2026-10-11 06:47:01] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-11 06:47:01] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-11 06:47:01] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-11 06:47:01] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-11 06:47:01] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-11 06:47:01] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-12 13:56:33] === LOGIN REQUEST RECEIVED ===
+[2026-10-12 13:56:33] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-12 13:56:33] MySQLi connection established successfully
+[2026-10-12 13:56:33] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"123456789","rememberMe":false}
+[2026-10-12 13:56:33] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 123456789
+    [rememberMe] => 
+)
+
+[2026-10-12 13:56:33] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-12 13:56:33] ❌ Login failed: Invalid email or password
+[2026-10-12 13:56:37] === LOGIN REQUEST RECEIVED ===
+[2026-10-12 13:56:37] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-12 13:56:37] MySQLi connection established successfully
+[2026-10-12 13:56:37] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-12 13:56:37] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-12 13:56:37] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-12 13:56:37] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-12 13:56:37] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+    [csrf_token] => cfeb82e8ffb9032d679d82f899ff8f4058e499b6b7cf8901ad375d535ccea754
+    [username] => admins
+    [email] => asdasdas
+    [role] => admin
+)
+
+[2026-10-12 13:56:37] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-12 13:57:37] === LOGIN REQUEST RECEIVED ===
+[2026-10-12 13:57:37] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-12 13:57:37] MySQLi connection established successfully
+[2026-10-12 13:57:37] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-12 13:57:37] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-12 13:57:37] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-12 13:57:37] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-12 13:57:37] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-12 13:57:37] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-12 13:58:58] === LOGIN REQUEST RECEIVED ===
+[2026-10-12 13:58:58] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-12 13:58:58] MySQLi connection established successfully
+[2026-10-12 13:58:58] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-12 13:58:58] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-12 13:58:58] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-10-12 13:58:58] Patient login, staff session cleared
+[2026-10-12 13:58:58] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-10-14 01:11:47] === LOGIN REQUEST RECEIVED ===
+[2026-10-14 01:11:47] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-14 01:11:47] MySQLi connection established successfully
+[2026-10-14 01:11:47] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-14 01:11:47] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-14 01:11:47] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-14 01:11:48] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-14 01:11:48] Session data: Array
+(
+    [user_id] => 1
+    [username] => Admin
+    [email] => admin@ironforge.gym
+    [role] => admin
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-14 01:11:48] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-14 02:11:37] === LOGIN REQUEST RECEIVED ===
+[2026-10-14 02:11:37] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-14 02:11:37] MySQLi connection established successfully
+[2026-10-14 02:11:37] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-14 02:11:37] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-14 02:11:37] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-14 02:11:37] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-14 02:11:37] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-14 02:11:37] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-14 15:56:47] === LOGIN REQUEST RECEIVED ===
+[2026-10-14 15:56:47] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-14 15:56:47] MySQLi connection established successfully
+[2026-10-14 15:56:47] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-14 15:56:47] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-14 15:56:47] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-14 15:56:47] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-14 15:56:47] Session data: Array
+(
+    [user_id] => 1
+    [username] => Michaela
+    [email] => stodomingomichaela747@gmail.com
+    [role] => member
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-14 15:56:47] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-14 15:57:27] === LOGIN REQUEST RECEIVED ===
+[2026-10-14 15:57:27] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-14 15:57:27] MySQLi connection established successfully
+[2026-10-14 15:57:27] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-14 15:57:27] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-14 15:57:27] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-14 15:57:27] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-14 15:57:27] Session data: Array
+(
+    [user_id] => 22
+    [username] => choy
+    [email] => choyabitona@gmail.com
+    [role] => trainer
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-14 15:57:27] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-14 15:57:40] === LOGIN REQUEST RECEIVED ===
+[2026-10-14 15:57:40] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-14 15:57:40] MySQLi connection established successfully
+[2026-10-14 15:57:40] Raw input received: {"email":"asdasdasdasqw@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-14 15:57:40] Decoded input: Array
+(
+    [email] => asdasdasdasqw@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-14 15:57:40] Login attempt for email: asdasdasdasqw@gmail.com
+[2026-10-14 15:57:40] Patient login, staff session cleared
+[2026-10-14 15:57:40] ✅ Login successful for user: asdasdasdasqw@gmail.com
+[2026-10-15 07:59:15] === LOGIN REQUEST RECEIVED ===
+[2026-10-15 07:59:15] File paths: | Data: Array
+(
+    [conn] => C:\wamp64\www\dental/conn/conn.php
+    [functions] => C:\wamp64\www\dental/functions/login_functions.php
+)
+
+[2026-10-15 07:59:15] MySQLi connection established successfully
+[2026-10-15 07:59:15] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-15 07:59:15] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-15 07:59:15] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-15 07:59:16] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-15 07:59:16] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-15 07:59:16] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-15 19:09:52] === LOGIN REQUEST RECEIVED ===
+[2026-10-15 19:09:52] File paths: | Data: Array
+(
+    [conn] => C:\xampp\htdocs\dental/conn/conn.php
+    [functions] => C:\xampp\htdocs\dental/functions/login_functions.php
+)
+
+[2026-10-15 19:09:52] MySQLi connection established successfully
+[2026-10-15 19:09:52] Raw input received: {"email":"sssantiagojhonny607@gmail.com","password":"12345678","rememberMe":true}
+[2026-10-15 19:09:52] Decoded input: Array
+(
+    [email] => sssantiagojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 1
+)
+
+[2026-10-15 19:09:52] Login attempt for email: sssantiagojhonny607@gmail.com
+[2026-10-15 19:09:52] ✅ Staff session set for: sssantiagojhonny607@gmail.com (Role: admin)
+[2026-10-15 19:09:52] Session data: Array
+(
+    [user_id] => 1
+    [user_email] => sssantiagojhonny607@gmail.com
+    [user_name] => jhonny santiago
+    [user_role] => admin
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 1
+    [staff_name] => jhonny santiago
+    [staff_role] => admin
+    [is_staff] => 1
+)
+
+[2026-10-15 19:09:52] ✅ Login successful for user: sssantiagojhonny607@gmail.com
+[2026-10-15 19:11:24] === LOGIN REQUEST RECEIVED ===
+[2026-10-15 19:11:24] File paths: | Data: Array
+(
+    [conn] => C:\xampp\htdocs\dental/conn/conn.php
+    [functions] => C:\xampp\htdocs\dental/functions/login_functions.php
+)
+
+[2026-10-15 19:11:24] MySQLi connection established successfully
+[2026-10-15 19:11:24] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-15 19:11:24] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-15 19:11:24] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-15 19:11:24] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-15 19:11:24] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-15 19:11:24] ✅ Login successful for user: santiagsojhonny607@gmail.com

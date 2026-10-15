@@ -1,0 +1,16 @@
+[28-Jul-2026 16:55:05 Asia/Manila] === BILLING API CALLED ===
+[28-Jul-2026 16:55:05 Asia/Manila] POST: Array
+(
+    [action] => get_billing
+    [id] => 4
+    [user_id] => 27
+)
+
+[13-Sep-2026 15:55:43 Asia/Manila] === BILLING API CALLED ===
+[13-Sep-2026 15:55:43 Asia/Manila] POST: Array
+(
+    [action] => get_billing
+    [id] => 4
+    [user_id] => 27
+)
+
