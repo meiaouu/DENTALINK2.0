@@ -13,6 +13,11 @@
 require '../../conn/conn.php';
 require '../../functions/patient_functions.php';
 require '../../functions/audit_log.php';
+require_once '../../functions/appointment_patient_search.php';
+require_once '../../functions/connected_sessions.php';
+if (session_status() === PHP_SESSION_NONE) session_start();
+if (!aps_staff_authorized($conn)) { http_response_code(403); exit('Staff access required.'); }
+dcs_csrf();
 
 // Set timezone
 date_default_timezone_set('Asia/Manila');
@@ -76,6 +81,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
     header('Content-Type: application/json');
 
     $action = isset($_POST['action']) ? $_POST['action'] : '';
+    if (str_starts_with($action, 'connected_')) dcs_handle($conn);
     $id = isset($_POST['id']) ? (int)$_POST['id'] : 0;
 
     // Search existing appointments (to add as a patient service)
@@ -289,6 +295,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
 
     // Delete patient service
     if ($action === 'delete' && $id > 0) {
+        $managed=dcs_one($conn,'SELECT agreed_total FROM patient_services WHERE id=?','i',[$id]);
+        if ($managed && $managed['agreed_total'] !== null) dcs_json(['success'=>false,'message'=>'Connected treatment records cannot be deleted. Use an authorized reconciliation.'],422);
         $snap_stmt = $conn->prepare("
             SELECT ps.status, p.full_name AS patient_name, s.title AS service_title
             FROM patient_services ps
@@ -366,6 +374,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
 
     // Update session status and date
     if ($action === 'update_session') {
+        $managed=dcs_one($conn,'SELECT ps.agreed_total FROM patient_services ps JOIN service_sessions ss ON ss.patient_service_id=ps.id WHERE ss.id=?','i',[(int)($_POST['session_id']??0)]);
+        if ($managed && $managed['agreed_total'] !== null) dcs_json(['success'=>false,'message'=>'Connected sessions must be updated using their linked appointment workflow.'],422);
         $session_id = isset($_POST['session_id']) ? (int)$_POST['session_id'] : 0;
         $status = isset($_POST['status']) ? $_POST['status'] : '';
         $session_date = isset($_POST['session_date']) ? $_POST['session_date'] : null;
@@ -416,6 +426,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
 
     // ===== ADD A NEW SESSION TO AN EXISTING SERVICE =====
     if ($action === 'add_session') {
+        $managed=dcs_one($conn,'SELECT agreed_total FROM patient_services WHERE id=?','i',[(int)($_POST['patient_service_id']??0)]);
+        if ($managed && $managed['agreed_total'] !== null) dcs_json(['success'=>false,'message'=>'Use Session Charges to add a connected session and sync billing.'],422);
         $patient_service_id = isset($_POST['patient_service_id']) ? (int)$_POST['patient_service_id'] : 0;
         $session_date = isset($_POST['session_date']) && $_POST['session_date'] !== '' ? $_POST['session_date'] : null;
         $session_status = isset($_POST['session_status']) && $_POST['session_status'] !== '' ? $_POST['session_status'] : 'scheduled';
@@ -683,6 +695,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
             case 'update_service':
                 $id = intval($_POST['id']);
+                $managed=dcs_one($conn,'SELECT agreed_total FROM patient_services WHERE id=?','i',[$id]);
+                if ($managed && $managed['agreed_total'] !== null) { $error_message='Connected treatments must be edited through Session Charges; invoice and completed sessions are protected.'; break; }
                 $patient_id = intval($_POST['patient_id']);
                 $service_id = intval($_POST['service_id']);
                 $dentist_id = intval($_POST['dentist_id']);
@@ -1484,6 +1498,7 @@ include 'ssidebar.php';
                     <p class="text-sm text-gray-500 mt-1">Manage all patient services and sessions · <span id="totalCount"><?= $stats['total'] ?? 0 ?></span> total</p>
                 </div>
                 <div class="flex flex-wrap gap-2">
+                    <button onclick="openConnectedModal()" class="btn-primary" style="background:#0b1628"><i class="fas fa-link"></i> Connected Treatment</button>
                     <button onclick="showCreateModal()" class="btn-primary">
                         <i class="fas fa-plus-circle"></i> Add Service
                     </button>
@@ -1989,6 +2004,46 @@ include 'ssidebar.php';
     </div>
 </div>
 
+
+<!-- Connected appointment / service / session billing setup -->
+<div class="modal-overlay" id="connectedModal" role="dialog" aria-modal="true" aria-label="Connected treatment and sessions">
+  <div class="modal-box" style="max-width:790px">
+    <div class="modal-header" style="background:#0b1628;color:#fff">
+      <h3 style="color:white"><i class="fas fa-link" style="color:#0d9e8c"></i> Connected Treatment & Session Pricing</h3>
+      <button type="button" onclick="closeConnectedModal()" class="modal-close-btn" style="color:white" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-field"><label>Treatment Source</label><select id="dcsSource" onchange="dcsSwitchSource()">
+        <option value="appointment">From Completed Appointment</option><option value="patient">New Treatment for Existing Patient</option>
+      </select></div>
+      <div class="form-field"><label>Search Patient Name / Completed Appointment</label><input id="dcsLookup" placeholder="Enter 2 or more characters..." oninput="dcsSearch()"><div id="dcsResults" style="margin-top:8px"></div></div>
+      <div id="dcsSelection" style="font-size:12px;color:#0a7d6e;margin:10px 0"></div>
+      <div class="form-row"><div class="form-field"><label>Service</label><select id="dcsService" onchange="dcsChooseService()"><option value="">Choose service</option>
+      <?php $dcsServices=$conn->query('SELECT id,title,price FROM services WHERE is_active=1 ORDER BY title'); while($sv=$dcsServices->fetch_assoc()): ?>
+      <option value="<?= (int)$sv['id'] ?>" data-price="<?= htmlspecialchars($sv['price'],ENT_QUOTES) ?>"><?= htmlspecialchars($sv['title'],ENT_QUOTES) ?></option><?php endwhile; ?></select></div>
+      <div class="form-field"><label>Assigned Dentist</label><select id="dcsDentist"><option value="">Choose dentist</option>
+      <?php $dcsDentists=$conn->query('SELECT id,first_name,last_name FROM dentists WHERE is_active=1 ORDER BY first_name'); while($dr=$dcsDentists->fetch_assoc()): ?>
+      <option value="<?= (int)$dr['id'] ?>"><?= htmlspecialchars('Dr. '.$dr['first_name'].' '.$dr['last_name'],ENT_QUOTES) ?></option><?php endwhile; ?></select></div></div>
+      <div class="form-row"><div class="form-field"><label>Total Treatment Charge (₱)</label><input id="dcsTotal" type="number" min="0" max="9999999" step="0.01" value="0.00" oninput="dcsBuildSessions(false)"></div>
+      <div class="form-field"><label>Total Sessions</label><input id="dcsNumber" type="number" min="1" max="60" value="1" oninput="dcsBuildSessions(false)"></div></div>
+      <div style="display:flex;align-items:center;gap:10px;background:#e6f7f5;border-radius:10px;padding:12px;margin:12px 0">
+        <input id="dcsSplit" type="checkbox" onchange="dcsBuildSessions(false)" style="width:19px;height:19px;accent-color:#0d9e8c">
+        <div><strong>Enable per-session pricing</strong><div style="font-size:12px;color:#64748b">Off: total is charged once; additional sessions have zero extra charge. On: distribute the total across sessions, with editable amounts.</div></div>
+      </div>
+      <div id="dcsSessionPreview"></div>
+      <div id="dcsMessage" role="status" style="color:#b45309;font-size:12px;margin-top:8px"></div>
+    </div>
+    <div class="modal-footer"><button class="btn-outline" onclick="closeConnectedModal()">Cancel</button><button id="dcsSubmit" class="btn-primary" onclick="dcsSave()"><i class="fas fa-save"></i> Save & Sync Billing</button></div>
+  </div>
+</div>
+<!-- Session pricing editor for a saved treatment -->
+<div class="modal-overlay" id="dcsPricingModal" role="dialog" aria-modal="true" aria-label="Edit session pricing">
+ <div class="modal-box" style="max-width:650px"><div class="modal-header" style="background:#0b1628"><h3 style="color:white">Session Pricing & Billing</h3><button style="color:white" class="modal-close-btn" onclick="dcsClosePricing()">&times;</button></div>
+ <div class="modal-body"><div id="dcsPricingList"></div><div id="dcsPricingWarning" style="font-size:12px;color:#b45309;margin-top:10px"></div>
+ <div class="form-row" style="margin-top:18px"><div class="form-field"><label>New Session Date</label><input id="dcsNewDate" type="date"></div><div class="form-field"><label>New Session Charge (₱)</label><input id="dcsNewAmount" type="number" min="0" step="0.01" value="0.00"></div></div></div>
+ <div class="modal-footer"><button class="btn-outline" onclick="dcsClosePricing()">Close</button><button class="btn-primary" onclick="dcsAddSession()"><i class="fas fa-plus"></i> Add Session</button><button class="btn-primary" onclick="dcsUpdatePrices()"><i class="fas fa-save"></i> Update Prices</button></div>
+ </div></div>
+
 <!-- View Service Modal -->
 <div id="viewServiceModal" class="modal-overlay">
     <div class="modal-box" style="max-width: 800px;">
@@ -2012,7 +2067,8 @@ include 'ssidebar.php';
         </div>
         
         <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
-            <button type="button" id="viewAddSessionBtn" class="btn-primary" onclick="openAddSessionFromView()"
+            <button type="button" id="dcsPriceBtn" class="btn-primary" onclick="dcsOpenPricing(currentViewingServiceId)" style="background:#0b1628"><i class="fas fa-coins"></i> Session Charges</button>
+             <button type="button" id="viewAddSessionBtn" class="btn-primary" onclick="openAddSessionFromView()"
                     style="padding: 10px 22px; border-radius: 10px; font-weight: 600; font-size: 13px; background: linear-gradient(135deg, #0d9e8c 0%, #0a7d6e 100%); color: white; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(13,158,140,0.25);">
                 <i class="fas fa-plus-circle"></i> Add Session
             </button>
@@ -2733,6 +2789,8 @@ function viewService(id) {
             return;
         }
         const data = res.data;
+        document.getElementById('viewAddSessionBtn').style.display = data.agreed_total !== null ? 'none' : 'inline-flex';
+        document.getElementById('dcsPriceBtn').style.display = data.agreed_total !== null ? 'inline-flex' : 'none';
         document.getElementById('viewServiceTitle').innerHTML = `<i class="fas fa-eye" style="color: #0d9e8c;"></i> Service #${data.id}`; 
         let sessionsHtml = '';
         if (data.sessions && data.sessions.length > 0) {
@@ -3141,6 +3199,25 @@ function exportData() {
         window.location.href = 'services_export.php';
     }, 1500);
 }
+
+// Connected Sessions: separate, validated workflow sharing the same patient_services and billing tables.
+const dcsCsrf = <?= json_encode(dcs_csrf()) ?>;
+let dcsChosen = null, dcsAppts = [], dcsPatients = [], dcsSearchTimer = null, dcsCurrentPs = 0;
+const dcsById = id => document.getElementById(id);
+function openConnectedModal(){dcsChosen=null;dcsById('dcsLookup').value='';dcsById('dcsSelection').textContent='';dcsById('dcsResults').innerHTML='';dcsById('dcsSource').value='appointment';dcsById('dcsSplit').checked=false;dcsById('dcsNumber').value='1';dcsById('dcsTotal').value='0.00';dcsById('dcsService').value='';dcsById('dcsDentist').value='';dcsById('dcsMessage').textContent='';dcsSwitchSource();dcsById('connectedModal').classList.add('open');}
+function closeConnectedModal(){dcsById('connectedModal').classList.remove('open');}
+function dcsSwitchSource(){dcsChosen=null;dcsById('dcsResults').innerHTML='';dcsById('dcsSelection').textContent='';dcsById('dcsLookup').value='';dcsById('dcsService').disabled=false;dcsBuildSessions(false);}
+function dcsSearch(){clearTimeout(dcsSearchTimer);const q=dcsById('dcsLookup').value.trim();if(q.length<2){dcsById('dcsResults').innerHTML='';return;}dcsSearchTimer=setTimeout(async()=>{const fd=new FormData();fd.append('action','connected_lookup');fd.append('q',q);try{const res=await fetch('patient_services.php?ajax=1',{method:'POST',body:fd});const obj=await res.json();if(!obj.success)throw Error(obj.message);dcsAppts=obj.appointments;dcsPatients=obj.patients;const source=dcsById('dcsSource').value;const entries=source==='appointment'?dcsAppts:dcsPatients;dcsById('dcsResults').innerHTML=entries.map((item,i)=>`<button type="button" onclick="dcsPick(${i})" style="display:block;text-align:left;padding:8px;width:100%;background:#fff;border:1px solid #e2e8f0;border-radius:8px;margin:4px 0">${esc(item.full_name)} ${source==='appointment'?'— Appointment #'+item.id+' ('+esc(item.appointment_date)+')':''}</button>`).join('')||'<p>No matches found</p>';}catch(e){dcsById('dcsMessage').textContent='Search unavailable: '+e.message;}},300);}
+function dcsPick(i){const appt=dcsById('dcsSource').value==='appointment';dcsChosen=(appt?dcsAppts:dcsPatients)[i];if(!dcsChosen)return;dcsById('dcsResults').innerHTML='';dcsById('dcsSelection').textContent=(appt?'Completed appointment #'+dcsChosen.id:'Existing patient #'+dcsChosen.id)+' — '+dcsChosen.full_name;if(appt){dcsById('dcsDentist').value=dcsChosen.dentist_id||'';const allowed=new Set((dcsChosen.procedures||[]).map(p=>String(p.service_id)));Array.from(dcsById('dcsService').options).forEach(opt=>{opt.disabled=opt.value!==''&&!allowed.has(opt.value)});const first=dcsChosen.procedures?.[0];if(first){dcsById('dcsService').value=first.service_id;dcsById('dcsTotal').value=first.charge;}}else{Array.from(dcsById('dcsService').options).forEach(o=>o.disabled=false);dcsById('dcsService').value='';dcsById('dcsTotal').value='0.00';}dcsBuildSessions(false);}
+function dcsChooseService(){const sel=dcsById('dcsService');if(!dcsChosen)return;const proc=dcsById('dcsSource').value==='appointment'?(dcsChosen.procedures||[]).find(p=>String(p.service_id)===sel.value):null;dcsById('dcsTotal').value=proc?proc.charge:sel.selectedOptions[0]?.dataset.price||'0.00';dcsBuildSessions(false);}
+function dcsBuildSessions(preserve){const n=Math.min(60,Math.max(1,parseInt(dcsById('dcsNumber').value)||1));const split=dcsById('dcsSplit').checked;const total=Math.round((parseFloat(dcsById('dcsTotal').value)||0)*100);const amounts=Array.from({length:n},(_,i)=>split?Math.floor(total/n)+(i<total%n?1:0):(i===0?total:0));dcsById('dcsSessionPreview').innerHTML=amounts.map((c,i)=>`<div class="form-row" style="align-items:center;border-bottom:1px solid #e2e8f0;padding:8px 0"><div><b>Session ${i+1}</b>${i===0&&dcsById('dcsSource').value==='appointment'?'<span class="mini-badge ok">From completed appointment</span>':''}</div><div class="form-field" style="margin:0"><label>Session Charge (₱)</label><input class="dcsAmount" type="number" min="0" step="0.01" value="${(c/100).toFixed(2)}" ${!split?'readonly':''}></div></div>`).join('');}
+async function dcsRequest(fd){fd.append('csrf',dcsCsrf);const res=await fetch('patient_services.php?ajax=1',{method:'POST',body:fd});const data=await res.json();if(!data.success)throw Error(data.message||'Unable to save');return data;}
+async function dcsSave(){if(!dcsChosen||!dcsById('dcsService').value||!dcsById('dcsDentist').value){dcsById('dcsMessage').textContent='Choose a patient/appointment, service, and dentist.';return;}const btn=dcsById('dcsSubmit');btn.disabled=true;try{const fd=new FormData();fd.append('action','connected_create');fd.append('appointment_id',dcsById('dcsSource').value==='appointment'?dcsChosen.id:'');fd.append('patient_id',dcsById('dcsSource').value==='patient'?dcsChosen.id:'');fd.append('service_id',dcsById('dcsService').value);fd.append('dentist_id',dcsById('dcsDentist').value);fd.append('sessions',dcsById('dcsNumber').value);fd.append('total',dcsById('dcsTotal').value);fd.append('split',dcsById('dcsSplit').checked?'1':'0');fd.append('amounts',JSON.stringify([...document.querySelectorAll('.dcsAmount')].map(e=>e.value)));const data=await dcsRequest(fd);closeConnectedModal();await Swal.fire('Connected',`Service #${data.patient_service_id} linked to invoice ${data.billing.code}`,'success');location.reload();}catch(e){dcsById('dcsMessage').textContent=e.message;}finally{btn.disabled=false;}}
+function dcsClosePricing(){dcsById('dcsPricingModal').classList.remove('open');}
+async function dcsOpenPricing(id){if(!id)return;const fd=new FormData();fd.append('action','get');fd.append('id',id);try{const res=await fetch('patient_services.php?ajax=1',{method:'POST',body:fd});const body=await res.json();if(!body.success)throw Error(body.message);if(body.data.agreed_total===null)throw Error('Legacy treatment pricing must be reconciled before using this editor.');dcsCurrentPs=id;dcsById('dcsPricingList').innerHTML=(body.data.sessions||[]).map(s=>`<div style="padding:10px 0;border-bottom:1px solid #e2e8f0"><b>Session ${s.session_number}</b> — ${esc(s.status)} ${s.appointment_id?'· Appointment #'+s.appointment_id:''}<label style="display:block;font-size:11px;color:#64748b">Charge (₱)</label><input type="number" class="dcsEditCharge" min="0" step="0.01" value="${esc(s.session_charge??'0.00')}" ${Number(s.charge_locked)?'readonly title="Completed appointment session is locked"':''} style="padding:7px 10px;width:100%;border:1px solid #ddd;border-radius:7px"></div>`).join('');dcsById('dcsPricingWarning').textContent='Changes sync with Billing only if the invoice has no recorded payments or protected discounts. Completed appointment charges cannot be changed here.';dcsById('dcsPricingModal').classList.add('open');}catch(e){Swal.fire('Cannot open',e.message,'warning');}}
+async function dcsUpdatePrices(){try{const fd=new FormData();fd.append('action','connected_update_charges');fd.append('patient_service_id',dcsCurrentPs);fd.append('amounts',JSON.stringify([...document.querySelectorAll('.dcsEditCharge')].map(x=>x.value)));const d=await dcsRequest(fd);dcsClosePricing();Swal.fire('Updated',`Invoice ${d.billing.code} synchronized.`,'success');liveSearch(currentPage);}catch(e){Swal.fire('Cannot update',e.message,'error');}}
+async function dcsAddSession(){try{const fd=new FormData();fd.append('action','connected_add_session');fd.append('patient_service_id',dcsCurrentPs);fd.append('date',dcsById('dcsNewDate').value);fd.append('charge',dcsById('dcsNewAmount').value);const d=await dcsRequest(fd);await dcsOpenPricing(dcsCurrentPs);Swal.fire('Added',`Invoice ${d.billing.code} synchronized.`,'success');liveSearch(currentPage);}catch(e){Swal.fire('Cannot add session',e.message,'error');}}
+
 </script>
 
 <?php

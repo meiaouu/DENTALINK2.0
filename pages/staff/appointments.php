@@ -1,5 +1,6 @@
 <?php
 require '../../conn/conn.php';
+require_once '../../functions/confirmed_patient_link.php';
 require '../../functions/appointment_email.php';
 require '../../functions/audit_log.php';
 require '../../functions/bulk_email_appointment.php';
@@ -145,7 +146,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
         $total_pages = ceil($total_records / $limit);
         $count_stmt->close();
 
-        $sql .= " ORDER BY CASE WHEN a.appointment_date = CURDATE() THEN 0 WHEN a.appointment_date > CURDATE() THEN 1 ELSE 2 END ASC, CASE WHEN a.appointment_date >= CURDATE() THEN a.appointment_date END ASC, CASE WHEN a.appointment_date < CURDATE() THEN a.appointment_date END DESC, a.appointment_time ASC, a.id DESC LIMIT ? OFFSET ?";
+        $sql .= " ORDER BY a.id DESC LIMIT ? OFFSET ?";
         $params[] = $limit;
         $params[] = $offset;
         $types .= "ii";
@@ -219,6 +220,9 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
                 $html .= '<td><select class="status-dropdown" onclick="event.stopPropagation();" onchange="updateStatus(' . $appt['id'] . ', this.value, this)">';
                 $html .= '<option value="pending"' . ($appt['status'] === 'pending' ? ' selected' : '') . '>Pending</option>';
                 $html .= '<option value="approved"' . ($appt['status'] === 'approved' ? ' selected' : '') . '>Approved</option>';
+                if ($appt['status'] === 'approved') {
+                    $html .= '<option value="confirmed">Confirm Patient Arrival</option>';
+                }
                 if ($appt['status'] === 'confirmed') {
                     $html .= '<option value="confirmed" selected disabled>Arrived at Clinic</option>';
                 }
@@ -290,45 +294,23 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
     // ===== CONFIRM ARRIVAL =====
     if ($action === 'confirm_arrival' && $id > 0) {
         try {
-            $check_stmt = $conn->prepare("SELECT arrived_at, full_name FROM appointments WHERE id = ?");
-            $check_stmt->bind_param("i", $id);
-            $check_stmt->execute();
-            $check_result = $check_stmt->get_result();
-            $row = $check_result->fetch_assoc();
-            $check_stmt->close();
-            
-            if (!$row) {
-                $response = ['success' => false, 'message' => 'Appointment not found.'];
-            } elseif ($row['arrived_at']) {
-                $response = [
-                    'success' => false, 
-                    'message' => 'Arrival already confirmed at ' . date('g:i A', strtotime($row['arrived_at']))
-                ];
-            } else {
-                $stmt = $conn->prepare("UPDATE appointments SET status = 'confirmed', arrived_at = NOW(), updated_at = NOW() WHERE id = ?");
-                $stmt->bind_param("i", $id);
-                
-                if ($stmt->execute()) {
-                    $response = [
-                        'success' => true, 
-                        'message' => 'Patient arrival confirmed at ' . date('g:i A'),
-                        'arrival_time' => date('g:i A')
-                    ];
-                    if (function_exists('log_staff_activity')) {
-                        log_staff_activity(
-                            $conn, 'status_change', 'appointments',
-                            "Confirmed arrival for appointment #{$id} ({$row['full_name']}) at " . date('g:i A'),
-                            'appointment', $id, null,
-                            ['status' => 'confirmed', 'arrived_at' => date('Y-m-d H:i:s')]
-                        );
-                    }
-                } else {
-                    $response = ['success' => false, 'message' => 'Failed to confirm arrival.'];
-                }
-                $stmt->close();
+            // Only approved appointments may proceed to patient arrival confirmation.
+            $gate = $conn->prepare('SELECT status FROM appointments WHERE id = ? LIMIT 1');
+            $gate->bind_param('i', $id);
+            $gate->execute();
+            $gateRow = $gate->get_result()->fetch_assoc();
+            $gate->close();
+            if (!$gateRow || $gateRow['status'] !== 'approved') {
+                echo json_encode(['success' => false, 'message' => 'Approve the appointment before confirming patient arrival.']);
+                exit;
             }
-        } catch (Exception $e) {
-            $response = ['success' => false, 'message' => 'Error: ' . $e->getMessage()];
+            $linked = dcl_confirm_appointment($conn, $id);
+            $response = ['success' => true, 'message' => 'Patient confirmed and linked to clinic record.', 'patient_id' => $linked['patient_id']];
+        } catch (DomainException $e) {
+            $response = ['success' => false, 'message' => $e->getMessage()];
+        } catch (Throwable $e) {
+            error_log('Patient confirmation failed: '.$e->getMessage());
+            $response = ['success' => false, 'message' => 'Confirmation could not be saved. Please try again.'];
         }
         echo json_encode($response);
         exit;
@@ -451,8 +433,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
             }
 
             // Do not allow repeated confirmation to rewind an active or completed treatment.
-            if ($status === 'confirmed' && !in_array($appointment['status'], ['pending', 'approved', 'confirmed'], true)) {
-                echo json_encode(['success' => false, 'message' => 'This treatment has already started or finished.']);
+            if ($status === 'confirmed' && $appointment['status'] !== 'approved') {
+                echo json_encode(['success' => false, 'message' => 'Appointment must be Approved before patient arrival can be confirmed.']);
                 exit;
             }
 
@@ -486,6 +468,21 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
 
             $is_approving  = ($status === 'approved'  && !$was_already_approved);
             $is_confirming = ($status === 'confirmed' && !$was_already_confirmed);
+
+            // Unified confirmed transition: patient registration + appointment link are atomic.
+            // No web login account is generated from clinic confirmation.
+            if ($status === 'confirmed') {
+                try {
+                    $linked = dcl_confirm_appointment($conn, $id, $dentistId, $notes);
+                    echo json_encode(['success'=>true, 'message'=>'Appointment confirmed and clinic patient linked.', 'patient_id'=>$linked['patient_id']]);
+                } catch (DomainException $e) {
+                    echo json_encode(['success'=>false,'message'=>$e->getMessage()]);
+                } catch (Throwable $e) {
+                    error_log('Confirm appointment error: '.$e->getMessage());
+                    echo json_encode(['success'=>false,'message'=>'Confirmation failed. Please try again.']);
+                }
+                exit;
+            }
 
             // ---- Update the appointment ----
             $sql = "UPDATE appointments SET status = ?";
@@ -1174,6 +1171,10 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
             echo json_encode(['success' => false, 'message' => 'Appointment no longer exists.']);
             exit;
         }
+        // Editing must not approve, confirm, cancel or rewind a booking. Use
+        // the dedicated status endpoint so approval/arrival checks are enforced.
+        $new_status = $existingAppointment['status'];
+
         if (!empty($existingAppointment['patient_id'])) {
             foreach (['full_name', 'age', 'occupation', 'phone', 'email', 'region',
                       'province', 'city', 'barangay', 'street_address'] as $field) {
@@ -1323,7 +1324,7 @@ $total_records = $count_stmt->get_result()->fetch_assoc()['total'];
 $total_pages = ceil($total_records / $limit);
 $count_stmt->close();
 
-$sql .= " ORDER BY CASE WHEN a.appointment_date = CURDATE() THEN 0 WHEN a.appointment_date > CURDATE() THEN 1 ELSE 2 END ASC, CASE WHEN a.appointment_date >= CURDATE() THEN a.appointment_date END ASC, CASE WHEN a.appointment_date < CURDATE() THEN a.appointment_date END DESC, a.appointment_time ASC, a.id DESC LIMIT ? OFFSET ?";
+$sql .= " ORDER BY a.id DESC LIMIT ? OFFSET ?";
 $params[] = $limit;
 $params[] = $offset;
 $types .= "ii";
@@ -2097,6 +2098,9 @@ document.getElementById('reminderSettingsModal').addEventListener('click', funct
                                     <select class="status-dropdown" onclick="event.stopPropagation();" onchange="updateStatus(<?= $appt['id'] ?>, this.value, this)">
                                         <option value="pending" <?= $appt['status'] === 'pending' ? ' selected' : '' ?>>Pending</option>
                                         <option value="approved" <?= $appt['status'] === 'approved' ? ' selected' : '' ?>>Approved</option>
+                                        <?php if ($appt['status'] === 'approved'): ?>
+                                            <option value="confirmed">Confirm Patient Arrival</option>
+                                        <?php endif; ?>
                                         <?php if ($appt['status'] === 'confirmed'): ?>
                                             <option value="confirmed" selected disabled>Arrived at Clinic</option>
                                         <?php endif; ?>
@@ -3449,11 +3453,8 @@ function openArrivalModal(id, selectElement) {
     arrivalApptId = id;
     arrivalSelectElement = selectElement;
     if (selectElement && !selectElement.dataset.previousValue) {
-        let prev = 'pending';
-        for (const opt of selectElement.options) {
-            if (opt.value !== 'confirmed' && opt.selected) { prev = opt.value; break; }
-        }
-        selectElement.dataset.previousValue = prev;
+        // Confirmation option is only exposed on approved appointments.
+        selectElement.dataset.previousValue = 'approved';
     }
     const now = new Date();
     const timeString = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
@@ -3482,7 +3483,7 @@ function submitArrival() {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            Swal.fire({ title: 'Arrival Confirmed!', html: `Patient arrived at <strong>${data.arrival_time}</strong>`, icon: 'success', timer: 2500, showConfirmButton: true, confirmButtonText: 'Great!' });
+            Swal.fire({ title: 'Arrival Confirmed!', text: data.message || 'Patient arrival recorded successfully.', icon: 'success', timer: 2500, showConfirmButton: true, confirmButtonText: 'Great!' });
             if (selectEl) selectEl.dataset.previousValue = 'confirmed';
             setTimeout(() => liveSearch(currentPage), 1500);
         } else {

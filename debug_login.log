@@ -4186,3 +4186,69 @@
 )
 
 [2026-10-15 19:11:24] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-16 05:38:24] === LOGIN REQUEST RECEIVED ===
+[2026-10-16 05:38:24] File paths: | Data: Array
+(
+    [conn] => C:\xampp\htdocs\dental/conn/conn.php
+    [functions] => C:\xampp\htdocs\dental/functions/login_functions.php
+)
+
+[2026-10-16 05:38:24] MySQLi connection established successfully
+[2026-10-16 05:38:24] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-16 05:38:24] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-16 05:38:24] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-16 05:38:24] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-16 05:38:24] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => jhoncny santiago
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => jhoncny santiago
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-16 05:38:24] ✅ Login successful for user: santiagsojhonny607@gmail.com
+[2026-10-16 05:46:28] === LOGIN REQUEST RECEIVED ===
+[2026-10-16 05:46:28] File paths: | Data: Array
+(
+    [conn] => C:\xampp\htdocs\dental/conn/conn.php
+    [functions] => C:\xampp\htdocs\dental/functions/login_functions.php
+)
+
+[2026-10-16 05:46:28] MySQLi connection established successfully
+[2026-10-16 05:46:28] Raw input received: {"email":"santiagsojhonny607@gmail.com","password":"12345678","rememberMe":false}
+[2026-10-16 05:46:28] Decoded input: Array
+(
+    [email] => santiagsojhonny607@gmail.com
+    [password] => 12345678
+    [rememberMe] => 
+)
+
+[2026-10-16 05:46:28] Login attempt for email: santiagsojhonny607@gmail.com
+[2026-10-16 05:46:28] ✅ Staff session set for: santiagsojhonny607@gmail.com (Role: staff)
+[2026-10-16 05:46:28] Session data: Array
+(
+    [user_id] => 22
+    [user_email] => santiagsojhonny607@gmail.com
+    [user_name] => Marjorie Pulmones
+    [user_role] => staff
+    [logged_in] => 1
+    [staff_logged_in] => 1
+    [staff_id] => 22
+    [staff_name] => Marjorie Pulmones
+    [staff_role] => staff
+    [is_staff] => 1
+)
+
+[2026-10-16 05:46:28] ✅ Login successful for user: santiagsojhonny607@gmail.com

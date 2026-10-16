@@ -15,124 +15,156 @@ function h($v) { return htmlspecialchars($v ?? '', ENT_QUOTES, 'UTF-8'); }
 
 $staffName = $_SESSION['staff_name'] ?? $_SESSION['user_name'] ?? 'Staff';
 
-$today      = date('Y-m-d');
-$monthStart = date('Y-m-01');
-$weekStart  = date('Y-m-d', strtotime('monday this week'));
-$weekEnd    = date('Y-m-d', strtotime('sunday this week'));
+/* ---------- Dashboard period filter ---------- */
+$period = $_GET['period'] ?? 'daily';
+$allowedPeriods = ['daily', 'weekly', 'monthly', 'yearly'];
+if (!is_string($period) || !in_array($period, $allowedPeriods, true)) {
+    $period = 'daily';
+}
 
-/* ---------- Today's appointments ---------- */
+$now = new DateTimeImmutable('now', new DateTimeZone('Asia/Manila'));
+switch ($period) {
+    case 'weekly':
+        $start = $now->modify('monday this week')->setTime(0, 0);
+        $end   = $start->modify('+7 days');
+        $periodTitle = 'This Week';
+        break;
+    case 'monthly':
+        $start = $now->modify('first day of this month')->setTime(0, 0);
+        $end   = $start->modify('+1 month');
+        $periodTitle = 'This Month';
+        break;
+    case 'yearly':
+        $start = $now->setDate((int)$now->format('Y'), 1, 1)->setTime(0, 0);
+        $end   = $start->modify('+1 year');
+        $periodTitle = 'This Year';
+        break;
+    default:
+        $start = $now->setTime(0, 0);
+        $end   = $start->modify('+1 day');
+        $periodTitle = 'Today';
+}
+// Half-open range: includes the first day and excludes the next period's first day.
+$startDate = $start->format('Y-m-d');
+$endDate = $end->format('Y-m-d');
+$startDatetime = $start->format('Y-m-d H:i:s');
+$endDatetime = $end->format('Y-m-d H:i:s');
+$endDisplay = $end->modify('-1 day')->format('M j, Y');
+$periodRange = $start->format('M j, Y') === $endDisplay
+    ? $endDisplay
+    : $start->format('M j, Y') . ' – ' . $endDisplay;
+
+/* ---------- Appointments scheduled within selected period ---------- */
 $stmt = $conn->prepare("
-    SELECT a.id, a.full_name, a.tracking_token, a.appointment_time, a.status, a.services,
+    SELECT a.id, a.full_name, a.tracking_token, a.appointment_date,
+           a.appointment_time, a.status, a.services,
            d.first_name AS dentist_first_name, d.last_name AS dentist_last_name
     FROM appointments a
     LEFT JOIN dentists d ON a.dentist_id = d.id
-    WHERE a.appointment_date = ?
-    ORDER BY a.appointment_time ASC
+    WHERE a.appointment_date >= ? AND a.appointment_date < ?
+    ORDER BY a.appointment_date ASC, a.appointment_time ASC
+    LIMIT 8
 ");
-$stmt->bind_param('s', $today);
+$stmt->bind_param('ss', $startDate, $endDate);
 $stmt->execute();
-$todaysAppointments = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+$periodAppointments = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 $stmt->close();
 
-$countByStatus = ['pending' => 0, 'approved' => 0, 'confirmed' => 0, 'in_progress' => 0, 'completed' => 0, 'cancelled' => 0, 'rejected' => 0];
-foreach ($todaysAppointments as $a) {
-    if (isset($countByStatus[$a['status']])) $countByStatus[$a['status']]++;
-}
-$todayTotal    = count($todaysAppointments);
-$waitingToday  = $countByStatus['approved'] + $countByStatus['confirmed'];
-$inProgress    = $countByStatus['in_progress'];
-$completedToday = $countByStatus['completed'];
-$pendingToday  = $countByStatus['pending'];
-
-/* ---------- Weekly / monthly appointment volume ---------- */
-$stmt = $conn->prepare("SELECT COUNT(*) AS c FROM appointments WHERE appointment_date BETWEEN ? AND ?");
-$stmt->bind_param('ss', $weekStart, $weekEnd);
+$stmt = $conn->prepare("
+    SELECT COUNT(*) AS total,
+           SUM(CASE WHEN status IN ('approved','confirmed') THEN 1 ELSE 0 END) AS waiting,
+           SUM(CASE WHEN status = 'in_progress' THEN 1 ELSE 0 END) AS progressing,
+           SUM(CASE WHEN status = 'pending' THEN 1 ELSE 0 END) AS pending
+    FROM appointments
+    WHERE appointment_date >= ? AND appointment_date < ?
+");
+$stmt->bind_param('ss', $startDate, $endDate);
 $stmt->execute();
-$weekTotal = (int)($stmt->get_result()->fetch_assoc()['c'] ?? 0);
+$apptStats = $stmt->get_result()->fetch_assoc() ?: [];
+$stmt->close();
+$periodTotal = (int)($apptStats['total'] ?? 0);
+$waitingPeriod = (int)($apptStats['waiting'] ?? 0);
+$inProgress = (int)($apptStats['progressing'] ?? 0);
+$pendingPeriod = (int)($apptStats['pending'] ?? 0);
+
+/* ---------- Patients registered within selected period ---------- */
+$stmt = $conn->prepare("
+    SELECT COUNT(*) AS total,
+           SUM(CASE WHEN status = 'active' THEN 1 ELSE 0 END) AS active
+    FROM patients
+    WHERE created_at >= ? AND created_at < ?
+");
+$stmt->bind_param('ss', $startDatetime, $endDatetime);
+$stmt->execute();
+$patientStats = $stmt->get_result()->fetch_assoc() ?: [];
+$stmt->close();
+$totalPatients = (int)($patientStats['total'] ?? 0);
+$activePatients = (int)($patientStats['active'] ?? 0);
+
+$stmt = $conn->prepare("
+    SELECT id, patient_id, full_name, phone, email, status, created_at
+    FROM patients
+    WHERE created_at >= ? AND created_at < ?
+    ORDER BY created_at DESC LIMIT 5
+");
+$stmt->bind_param('ss', $startDatetime, $endDatetime);
+$stmt->execute();
+$recentPatients = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 $stmt->close();
 
-$stmt = $conn->prepare("SELECT COUNT(*) AS c FROM appointments WHERE appointment_date >= ?");
-$stmt->bind_param('s', $monthStart);
-$stmt->execute();
-$monthTotal = (int)($stmt->get_result()->fetch_assoc()['c'] ?? 0);
-$stmt->close();
-
-$stmt = $conn->prepare("SELECT COUNT(*) AS c FROM appointments WHERE status = 'pending'");
-$stmt->execute();
-$pendingAllTime = (int)($stmt->get_result()->fetch_assoc()['c'] ?? 0);
-$stmt->close();
-
-/* ---------- Patients ---------- */
-$totalPatients = 0; $activePatients = 0; $newThisMonth = 0;
-if ($res = $conn->query("SELECT COUNT(*) AS c FROM patients")) {
-    $totalPatients = (int)($res->fetch_assoc()['c'] ?? 0);
-}
-if ($res = $conn->query("SELECT COUNT(*) AS c FROM patients WHERE status = 'active'")) {
-    $activePatients = (int)($res->fetch_assoc()['c'] ?? 0);
-}
-$stmt = $conn->prepare("SELECT COUNT(*) AS c FROM patients WHERE created_at >= ?");
-$stmt->bind_param('s', $monthStart);
-$stmt->execute();
-$newThisMonth = (int)($stmt->get_result()->fetch_assoc()['c'] ?? 0);
-$stmt->close();
-
-$recentPatients = [];
-if ($res = $conn->query("SELECT id, patient_id, full_name, phone, email, status, created_at FROM patients ORDER BY created_at DESC LIMIT 5")) {
-    $recentPatients = $res->fetch_all(MYSQLI_ASSOC);
-}
-
-/* ---------- Services / treatment plans ---------- */
-$activePlans = 0; $completedPlans = 0; $totalServices = 0;
+/* ---------- Services / treatment plans (current state) ---------- */
+$activePlans = 0;
 if ($res = $conn->query("SELECT COUNT(*) AS c FROM patient_services WHERE status != 'completed'")) {
     $activePlans = (int)($res->fetch_assoc()['c'] ?? 0);
 }
-if ($res = $conn->query("SELECT COUNT(*) AS c FROM patient_services WHERE status = 'completed'")) {
-    $completedPlans = (int)($res->fetch_assoc()['c'] ?? 0);
-}
-if ($res = $conn->query("SELECT COUNT(*) AS c FROM services WHERE is_active = 1")) {
-    $totalServices = (int)($res->fetch_assoc()['c'] ?? 0);
-}
 
-/* ---------- Dentists on roster ---------- */
+/* ---------- Dentists on roster and appointments in period ---------- */
 $dentists = [];
 if ($res = $conn->query("SELECT id, first_name, last_name, specialization FROM dentists WHERE is_active = 1 ORDER BY last_name ASC")) {
     $dentists = $res->fetch_all(MYSQLI_ASSOC);
 }
 $dentistApptCount = [];
-foreach ($todaysAppointments as $a) {
-    // not directly available (no dentist_id in select above), computed via separate query below instead
-}
 $stmt = $conn->prepare("
-    SELECT d.id, COUNT(*) AS c
-    FROM appointments a JOIN dentists d ON a.dentist_id = d.id
-    WHERE a.appointment_date = ? AND a.status NOT IN ('cancelled','rejected')
-    GROUP BY d.id
+    SELECT a.dentist_id AS id, COUNT(*) AS c
+    FROM appointments a
+    WHERE a.appointment_date >= ? AND a.appointment_date < ?
+      AND a.status NOT IN ('cancelled','rejected')
+      AND a.dentist_id IS NOT NULL
+    GROUP BY a.dentist_id
 ");
-$stmt->bind_param('s', $today);
+$stmt->bind_param('ss', $startDate, $endDate);
 $stmt->execute();
 $res = $stmt->get_result();
 while ($row = $res->fetch_assoc()) $dentistApptCount[$row['id']] = (int)$row['c'];
 $stmt->close();
 
-/* ---------- Chat activity (guest chat used on staff-chat.php) ---------- */
-$openChats = 0; $unreadChats = 0;
-if ($res = $conn->query("SELECT COUNT(*) AS c FROM chat_sessions WHERE status != 'closed'")) {
-    $openChats = (int)($res->fetch_assoc()['c'] ?? 0);
-}
+/* ---------- Guest chats active in the period ---------- */
+$stmt = $conn->prepare("
+    SELECT COUNT(*) AS c FROM chat_sessions
+    WHERE last_message_at >= ? AND last_message_at < ?
+");
+$stmt->bind_param('ss', $startDatetime, $endDatetime);
+$stmt->execute();
+$periodChats = (int)($stmt->get_result()->fetch_assoc()['c'] ?? 0);
+$stmt->close();
+
+// Unread is a live queue count, deliberately not a historical count.
+$unreadChats = 0;
 if ($res = $conn->query("SELECT COUNT(*) AS c FROM chat_messages WHERE sender = 'guest' AND is_read = 0")) {
     $unreadChats = (int)($res->fetch_assoc()['c'] ?? 0);
 }
-$recentChats = [];
-if ($res = $conn->query("
+$stmt = $conn->prepare("
     SELECT s.guest_id, s.status, s.last_message_at,
            (SELECT message FROM chat_messages m WHERE m.guest_id = s.guest_id ORDER BY m.id DESC LIMIT 1) AS last_message,
            (SELECT COUNT(*) FROM chat_messages m WHERE m.guest_id = s.guest_id AND m.sender = 'guest' AND m.is_read = 0) AS unread
     FROM chat_sessions s
-    ORDER BY s.last_message_at DESC
-    LIMIT 5
-")) {
-    $recentChats = $res->fetch_all(MYSQLI_ASSOC);
-}
+    WHERE s.last_message_at >= ? AND s.last_message_at < ?
+    ORDER BY s.last_message_at DESC LIMIT 5
+");
+$stmt->bind_param('ss', $startDatetime, $endDatetime);
+$stmt->execute();
+$recentChats = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+$stmt->close();
 
 function patientLabel($appt) {
     $name = trim($appt['full_name'] ?? '');
@@ -281,6 +313,13 @@ body {
 .dentist-row .d-name { font-weight: 700; color: #0b1628; }
 .dentist-row .d-spec { font-size: 11.5px; color: #9aa4b2; }
 .dentist-row .d-count { font-size: 12px; font-weight: 800; color: #0d9e8c; background: #e6f7f5; padding: 3px 10px; border-radius: 20px; }
+/* Dashboard period selector */
+.topbar-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.period-filter { display: flex; align-items: center; gap: 9px; padding: 5px 6px 5px 12px; border: 1px solid #e5e7eb; border-radius: 10px; background: white; }
+.period-filter label { font-size: 12px; color: #64748b; font-weight: 700; white-space: nowrap; }
+.period-filter select { font: inherit; font-size: 13px; font-weight: 700; color: #0b1628; border: 0; outline: none; border-radius: 7px; background: #e6f7f5; padding: 7px 9px; cursor: pointer; }
+@media(max-width: 900px) { .stats-row { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media(max-width: 560px) { .stats-row { grid-template-columns: 1fr; } .page { padding: 20px 14px; } .panel { overflow-x: auto; } .appt-table { min-width: 510px; } }
 </style>
 </head>
 <body>
@@ -291,35 +330,46 @@ body {
     <div class="topbar">
         <div>
             <h1>Welcome back, <?= h($staffName) ?> 👋</h1>
-            <div class="sub">Here's what's happening at the clinic today.</div>
+            <div class="sub">Here's what's happening at the clinic for <?= h(strtolower($periodTitle)) ?>.</div>
         </div>
-        <div class="date-pill"><i class="fas fa-calendar-day" style="color:#0d9e8c;"></i> <?= h(date('l, F j, Y')) ?></div>
+        <div class="topbar-controls">
+            <form action="dashboard.php" method="get" class="period-filter">
+                <label for="period">View by</label>
+                <select id="period" name="period" onchange="this.form.submit()">
+                    <option value="daily" <?= $period === 'daily' ? 'selected' : '' ?>>Daily</option>
+                    <option value="weekly" <?= $period === 'weekly' ? 'selected' : '' ?>>Weekly</option>
+                    <option value="monthly" <?= $period === 'monthly' ? 'selected' : '' ?>>Monthly</option>
+                    <option value="yearly" <?= $period === 'yearly' ? 'selected' : '' ?>>Yearly</option>
+                </select>
+            </form>
+            <div class="date-pill"><i class="fas fa-calendar-day" style="color:#0d9e8c;"></i> <?= h($periodRange) ?></div>
+        </div>
     </div>
 
     <div class="stats-row">
         <div class="stat-card">
             <div class="top-row"><div class="icon-box"><i class="fas fa-calendar-check"></i></div></div>
-            <div class="lbl">Today's Appointments</div>
-            <div class="num"><?= $todayTotal ?></div>
-            <div class="sub"><?= $waitingToday ?> waiting &middot; <?= $inProgress ?> in progress</div>
+            <div class="lbl">Appointments · <?= h($periodTitle) ?></div>
+            <div class="num"><?= $periodTotal ?></div>
+            <div class="sub"><?= $waitingPeriod ?> waiting &middot; <?= $inProgress ?> in progress</div>
         </div>
         <div class="stat-card alt1">
             <div class="top-row"><div class="icon-box"><i class="fas fa-users"></i></div></div>
-            <div class="lbl">Total Patients</div>
+            <div class="lbl">New Patients · <?= h($periodTitle) ?></div>
             <div class="num"><?= $totalPatients ?></div>
-            <div class="sub"><?= $activePatients ?> active &middot; +<?= $newThisMonth ?> this month</div>
+            <div class="sub"><?= $activePatients ?> active among new patients</div>
         </div>
         <div class="stat-card alt2">
             <div class="top-row"><div class="icon-box"><i class="fas fa-hourglass-half"></i></div></div>
             <div class="lbl">Pending Requests</div>
-            <div class="num"><?= $pendingAllTime ?></div>
-            <div class="sub"><?= $pendingToday ?> awaiting review today</div>
+            <div class="num"><?= $pendingPeriod ?></div>
+            <div class="sub">Awaiting review in selected period</div>
         </div>
         <div class="stat-card alt3">
             <div class="top-row"><div class="icon-box"><i class="fas fa-comment-dots"></i></div></div>
             <div class="lbl">Chat Activity</div>
-            <div class="num"><?= $openChats ?></div>
-            <div class="sub"><?= $unreadChats ?> unread message<?= $unreadChats === 1 ? '' : 's' ?></div>
+            <div class="num"><?= $periodChats ?></div>
+            <div class="sub">Conversations active in period &middot; <?= $unreadChats ?> unread now</div>
         </div>
     </div>
 
@@ -327,17 +377,18 @@ body {
         <div>
             <div class="panel">
                 <div class="panel-head">
-                    <h2><i class="fas fa-calendar-check"></i> Today's Schedule</h2>
+                    <h2><i class="fas fa-calendar-check"></i> Schedule · <?= h($periodTitle) ?></h2>
                     <a class="view-all" href="today.php">View all <i class="fas fa-arrow-right" style="font-size:10px;"></i></a>
                 </div>
-                <?php if ($todaysAppointments): ?>
+                <?php if ($periodAppointments): ?>
                     <table class="appt-table">
                         <thead>
-                            <tr><th>Time</th><th>Patient</th><th>Dentist</th><th>Status</th></tr>
+                            <tr><?php if ($period !== 'daily'): ?><th>Date</th><?php endif; ?><th>Time</th><th>Patient</th><th>Dentist</th><th>Status</th></tr>
                         </thead>
                         <tbody>
-                        <?php foreach (array_slice($todaysAppointments, 0, 8) as $a): ?>
+                        <?php foreach (array_slice($periodAppointments, 0, 8) as $a): ?>
                             <tr>
+                                <?php if ($period !== 'daily'): ?><td class="p-time"><?= h(date('M j', strtotime($a['appointment_date']))) ?></td><?php endif; ?>
                                 <td class="p-time"><?= h($a['appointment_time'] ? date('g:i A', strtotime($a['appointment_time'])) : '—') ?></td>
                                 <td>
                                     <div class="p-name"><?= h(patientLabel($a)) ?></div>
@@ -350,7 +401,7 @@ body {
                         </tbody>
                     </table>
                 <?php else: ?>
-                    <div class="empty-state"><i class="fas fa-calendar-xmark"></i>No appointments scheduled for today.</div>
+                    <div class="empty-state"><i class="fas fa-calendar-xmark"></i>No appointments scheduled for this period.</div>
                 <?php endif; ?>
             </div>
 
@@ -422,7 +473,7 @@ body {
                         <?php endforeach; ?>
                     </div>
                 <?php else: ?>
-                    <div class="empty-state"><i class="fas fa-user-slash"></i>No patients yet.</div>
+                    <div class="empty-state"><i class="fas fa-user-slash"></i>No new patients in this period.</div>
                 <?php endif; ?>
             </div>
 
@@ -451,7 +502,7 @@ body {
                         <?php endforeach; ?>
                     </div>
                 <?php else: ?>
-                    <div class="empty-state"><i class="fas fa-comment-slash"></i>No conversations yet.</div>
+                    <div class="empty-state"><i class="fas fa-comment-slash"></i>No conversations active in this period.</div>
                 <?php endif; ?>
             </div>
 
@@ -466,7 +517,7 @@ body {
                                 <div class="d-name">Dr. <?= h($d['first_name'] . ' ' . $d['last_name']) ?></div>
                                 <div class="d-spec"><?= h($d['specialization'] ?: 'General Dentistry') ?></div>
                             </div>
-                            <div class="d-count"><?= (int)($dentistApptCount[$d['id']] ?? 0) ?> today</div>
+                            <div class="d-count"><?= (int)($dentistApptCount[$d['id']] ?? 0) ?> <?= h(strtolower($periodTitle)) ?></div>
                         </div>
                     <?php endforeach; ?>
                 <?php else: ?>
